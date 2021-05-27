@@ -1,0 +1,3 @@
+[submodule "aretext"]
+	path = aretext
+	url = https://github.com/aretext/aretext.git
