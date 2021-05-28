@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="icon" type="image/x-icon" href="data:,">
+  <title>aretext : install</title>
+</head>
+<body>
+<h1>Install</h1>
+
+<h2>Supported Platforms</h2>
+
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Linux</td>
+<td>Fully supported</td>
+</tr>
+
+<tr>
+<td>*BSD</td>
+<td>Will probably work</td>
+</tr>
+
+<tr>
+<td>macOS</td>
+<td>Will probably work</td>
+</tr>
+
+<tr>
+<td>Windows</td>
+<td>Supported on WSL only</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Stable Releases</h2>
+
+<h3>Official Binaries</h3>
+
+<p>You can download the the official binaries from <a href="https://github.com/aretext/aretext/releases">the aretext releases page</a>.</p>
+
+<h2>Unstable Builds</h2>
+
+<h3>From source</h3>
+
+<p>If you have <a href="https://golang.org/doc/install">installed go</a>, then you can build aretext from source:</p>
+
+<pre><code>git clone https://github.com/aretext/aretext.git
+cd aretext
+make install
+</code></pre>
+
+<p>This will install aretext in <code>$HOME/go/bin</code>, which you can add to your <code>$PATH</code>:</p>
+
+<pre><code>export PATH=$PATH:$HOME/go/bin
+</code></pre>
+
+<h3>From the ArchLinux AUR</h3>
+
+<p>aretext-git is available as an <a href="https://aur.archlinux.org/packages/aretext-git/">AUR Package</a> If you use <a href="https://github.com/Jguer/yay">yay</a> just run this to install it:</p>
+
+<pre><code class="language-shell">yay -S aretext-git
+</code></pre>
+
+</body>
+</html>

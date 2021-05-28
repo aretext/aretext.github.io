@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="icon" type="image/x-icon" href="data:,">
+  <title>aretext : navigation</title>
+</head>
+<body>
+<h1>Navigation</h1>
+
+<p>This guide explains how to navigate efficiently within a document. It assumes you know how to start the editor and switch between normal/insert mode (if not, please read the <a href="quickstart.html">Quickstart</a> first).</p>
+
+<h2>Scrolling</h2>
+
+<p>To scroll up by half a screen, press Ctrl-u (&quot;up&quot;) in normal mode.</p>
+
+<p>To scroll down by half a screen, press Ctrl-d (&quot;down&quot;) in normal mode.</p>
+
+<h2>Line movement</h2>
+
+<p>To move the cursor to the last line, type &quot;G&quot; in normal mode.</p>
+
+<p>To move the cursor to the first line, type &quot;gg&quot; in normal mode.</p>
+
+<p>To move the cursor to a specific line number, type &quot;<number>gg&quot; in normal mode. For example, &quot;123gg&quot; moves the cursor to the start of line 123.</p>
+
+<p>To move the cursor to the start of the current line (after any indentation), use &quot;^&quot;. Use &quot;0&quot; to move to the start of the current line <em>before</em> any indentation.</p>
+
+<p>To move the cursor to the end of the current line, type &quot;$&quot; in normal mode.</p>
+
+<h2>Word movement</h2>
+
+<p>A &quot;word&quot; in aretext is a sequence of characters separated by whitespace.</p>
+
+<p>If syntax highlighting is enabled, then the syntax language will define additional word boundaries. For example, when editing Go code, the text <code>foo.Bar</code> would treat <code>foo</code>, <code>.</code>, and <code>Bar</code> as separate words because the Go compiler would recognize these as separate tokens.</p>
+
+<p>To move the cursor forward to the next word, press &quot;w&quot; in normal mode. Use &quot;e&quot; to move the cursor to the <em>end</em> of the current word, and &quot;b&quot; to move the cursor <em>back</em> to the start of the previous word.</p>
+
+<h2>Paragraph movement</h2>
+
+<p>A &quot;paragraph&quot; in aretext is a contiguous sequence of non-empty lines. To move the cursor to the next paragraph, type &quot;}&quot; in normal mode; to move to the previous paragraph, type &quot;{&quot;.</p>
+
+<h2>Text search</h2>
+
+<p>Aretext supports case-sensitive forward and backward search within a document. (It does not currently support case-insensitive or regular expression searches, but these features may be added in the future.)</p>
+
+<p>To search forward, type &quot;/&quot; in normal mode, then type your search query. To move the cursor to the search result, press enter; to abort the search, press escape.</p>
+
+<p>To search backward, type &quot;?&quot; in normal mode, then type your search query.</p>
+
+<p>To repeat a search, type &quot;n&quot; in normal mode (this moves the cursor to the &quot;next&quot; result). To move the cursor back to the previous result, type &quot;N&quot; in normal mode.</p>
+
+</body>
+</html>
