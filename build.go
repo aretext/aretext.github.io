@@ -34,13 +34,6 @@ func buildSite(docsPath, outputDirPath string) error {
 	os.MkdirAll(outputDirPath, 0744)
 	os.MkdirAll(filepath.Join(outputDirPath, "docs"), 0744)
 
-	for _, fn := range []string{"index.html", "style.css", "landing.css", "screenshot.gif"} {
-		err := copyFile(fn, filepath.Join(outputDirPath, fn))
-		if err != nil {
-			return errors.Wrapf(err, "copyFile")
-		}
-	}
-
 	tmpl, err := template.New("template.html").ParseFiles("template.html")
 	if err != nil {
 		return errors.Wrapf(err, "template.ParseFiles")

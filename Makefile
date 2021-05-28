@@ -1,7 +1,7 @@
 all: build
 
 clean:
-	rm -rf site
+	git clean -xfd site
 
 build: clean
 	go run build.go --docsPath ./aretext/docs --outputDirPath site
