@@ -1,9 +1,25 @@
+:root {
+  --fg-color: #1a1a1a;
+  --bg-color: #fdfdfd;
+  --quote-fg-color: #606060;
+  --quote-border-color: #e6e6e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #fdfdfd;
+    --bg-color: black;
+    --quote-fg-color: #e6e6e6;
+    --quote-border-color: #606060;
+  }
+}
+
 html {
   line-height: 1.5;
   font-family: Georgia, serif;
   font-size: 20px;
-  color: #1a1a1a;
-  background-color: #fdfdfd;
+  color: var(--fg-color);
+  background-color: var(--bg-color);
 }
 
 body {
@@ -26,31 +42,16 @@ body {
   }
 }
 
-@media print {
-  body {
-    background-color: transparent;
-    color: black;
-    font-size: 12pt;
-  }
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2, h3, h4 {
-    page-break-after: avoid;
-  }
-}
-
 p {
   margin: 1em 0;
 }
 
 a {
-  color: #1a1a1a;
+  color: var(--fg-color);
 }
 
 a:visited {
-  color: #1a1a1a;
+  color: var(--fg-color);
 }
 
 img {
@@ -82,8 +83,8 @@ li > ol, li > ul {
 blockquote {
   margin: 1em 0 1em 1.7em;
   padding-left: 1em;
-  border-left: 2px solid #e6e6e6;
-  color: #606060;
+  border-left: 2px solid var(--quote-border-color);
+  color: var(--quote-fg-color);
 }
 
 code {
@@ -108,7 +109,7 @@ pre code {
 }
 
 hr {
-  background-color: #1a1a1a;
+  background-color: var(--fg-color);
   border: none;
   height: 1px;
   margin: 1em 0;
@@ -129,12 +130,12 @@ table caption {
 
 tbody {
   margin-top: 0.5em;
-  border-top: 1px solid #1a1a1a;
-  border-bottom: 1px solid #1a1a1a;
+  border-top: 1px solid var(--fg-color);
+  border-bottom: 1px solid var(--fg-color);
 }
 
 th {
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--fg-color);
   padding: 0.25em 0.5em 0.25em 0.5em;
   text-align: left;
 }
