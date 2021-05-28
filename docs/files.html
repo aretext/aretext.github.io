@@ -8,7 +8,7 @@
   <title>aretext : files</title>
 </head>
 <body>
-<h1>Files</h1>
+<h1 id="files">Files</h1>
 
 <p>Aretext is designed to integrate seamlessly with a terminal-based workflow. This strongly influences aretext's approach to managing files:</p>
 
@@ -20,7 +20,7 @@
 <li><p>It automatically reloads files that change on disk (unless there are unsaved changes). For example, if you run a code formatting tool that changes a file, aretext will automatically reload it.</p></li>
 </ul>
 
-<h2>Fuzzy file search</h2>
+<h2 id="fuzzy-file-search">Fuzzy file search</h2>
 
 <p>Aretext has built-in fuzzy search for files. This allows you to quickly find and open a file without leaving the editor:</p>
 
@@ -33,13 +33,13 @@
 
 <p>Aretext always searches within the current working directory.</p>
 
-<h2>Opening a file from the command line</h2>
+<h2 id="opening-a-file-from-the-command-line">Opening a file from the command line</h2>
 
 <p>To have aretext open a document immediately, pass the path as a positional argument like this: <code>aretext path/to/file</code>.</p>
 
 <p>If you do not provide a path argument, aretext will start an empty document called something like &quot;untitled-1621625423.txt&quot; (the number is a Unix timestamp). You can either insert text and save this document (useful for writing quick notes) or use fuzzy file search to open another document.</p>
 
-<h2>Previous and next document</h2>
+<h2 id="previous-and-next-document">Previous and next document</h2>
 
 <p>Aretext remembers which documents you have opened in the editor. To return to the previous document:</p>
 
@@ -50,7 +50,7 @@
 
 <p>Once you have opened a previous document, you can return to next document using the &quot;open next document&quot; menu command.</p>
 
-<h2>Unsaved changes</h2>
+<h2 id="unsaved-changes">Unsaved changes</h2>
 
 <p>Aretext will warn you if a command would discard unsaved changes or overwrite changes made by another program to the file on disk. You must then decide to either force-save, force-reload, or force-quit.</p>
 
@@ -60,7 +60,7 @@
 <li>To force-quit, select the &quot;force quit&quot; menu command. This will discard unsaved changes and exit the program.</li>
 </ul>
 
-<h2>Using grep to search files</h2>
+<h2 id="using-grep-to-search-files">Using grep to search files</h2>
 
 <p>To search for a term in multiple files, you can create a custom menu command that calls <code>grep</code>. See <a href="customization.html">Customization</a> for instructions.</p>
 

@@ -8,13 +8,13 @@
   <title>aretext : edit</title>
 </head>
 <body>
-<h1>Edit</h1>
+<h1 id="edit">Edit</h1>
 
 <p>This guide describes commands you can use to edit a document efficiently. It assumes you are familiar with the commands described in the <a href="quickstart.html">Quickstart</a>.</p>
 
 <p>If you have used vim before, these will feel familiar. If not, this guide may feel a little overwhelming. Don't worry! You do not need to memorize all of these commands to use aretext effectively. The best way to learn is to choose a few commands that you think might be useful and practice until they feel comfortable.</p>
 
-<h2>Insert and append</h2>
+<h2 id="insert-and-append">Insert and append</h2>
 
 <p>In normal mode, type &quot;i&quot; to enter insert mode at the current cursor position. To insert at the position <em>after</em> the cursor, type &quot;a&quot; (short for &quot;append&quot;) instead.</p>
 
@@ -22,7 +22,7 @@
 
 <p>From insert mode, you can return to normal mode by pressing the escape key.</p>
 
-<h2>Delete</h2>
+<h2 id="delete">Delete</h2>
 
 <p>To delete a single character in normal mode, type &quot;x&quot;. (In insert mode, you can use the backspace key instead.)</p>
 
@@ -38,11 +38,11 @@
 <li>&quot;dj&quot; deletes the current and previous lines, and &quot;dk&quot; deletes the current and next line.</li>
 </ul>
 
-<h2>Replace</h2>
+<h2 id="replace">Replace</h2>
 
 <p>To replace the character under the cursor, type &quot;r&quot; in normal mode, then type the new character.</p>
 
-<h2>Change</h2>
+<h2 id="change">Change</h2>
 
 <p>In aretext, &quot;change&quot; means to delete some text then enter insert mode. This is useful for quickly changing a word or line.</p>
 
@@ -50,7 +50,7 @@
 
 <p>To change the current word under the cursor and trailing whitespace in normal mode, type &quot;caw&quot; (&quot;change a word&quot;).</p>
 
-<h2>Put and yank</h2>
+<h2 id="put-and-yank">Put and yank</h2>
 
 <p>When you delete text, aretext copies it to a hidden buffer. You can then insert the deleted text after the cursor by typing &quot;p&quot; (short for &quot;put&quot;) in normal mode. Alternatively, you can type &quot;P&quot; to insert the text before the cursor.</p>
 
@@ -58,7 +58,7 @@
 
 <p>If you want to copy/paste using your system's clipboard, you will need to add custom menu commands (see <a href="customization.html">Customization</a> for instructions).</p>
 
-<h2>Inserting and joining lines</h2>
+<h2 id="inserting-and-joining-lines">Inserting and joining lines</h2>
 
 <p>To start a new line below the cursor and enter insert mode, type &quot;o&quot;.</p>
 
@@ -66,17 +66,17 @@
 
 <p>To join the current line with the line below, type &quot;J&quot;.</p>
 
-<h2>Indenting and outdenting</h2>
+<h2 id="indenting-and-outdenting">Indenting and outdenting</h2>
 
 <p>To indent the current line, type &quot;&gt;&gt;&quot;.</p>
 
 <p>To outdent the current line, type &quot;&lt;&lt;&quot;.</p>
 
-<h2>Toggle case</h2>
+<h2 id="toggle-case">Toggle case</h2>
 
 <p>To change the character under the cursor from uppercase to lowercase, or vice versa, type &quot;~&quot;.</p>
 
-<h2>Selection (visual mode)</h2>
+<h2 id="selection-visual-mode">Selection (visual mode)</h2>
 
 <p>To start a selection, type &quot;v&quot; (short for &quot;visual mode&quot;). You can use the same cursor motions as in normal mode to move the end of the selection.</p>
 
@@ -95,7 +95,7 @@
 
 <p>To clear the selection and return to normal mode, press the escape key.</p>
 
-<h2>Undo and redo</h2>
+<h2 id="undo-and-redo">Undo and redo</h2>
 
 <p>To undo the last edit, type &quot;u&quot; (short for &quot;undo&quot;) in normal mode.</p>
 
@@ -103,7 +103,7 @@
 
 <p>Aretext clears the undo history whenever a document is loaded or reloaded.</p>
 
-<h2>Repeat last action (macros)</h2>
+<h2 id="repeat-last-action-macros">Repeat last action (macros)</h2>
 
 <p>To repeat the last action, type &quot;.&quot; in normal mode. This is useful for avoiding repetitive typing.</p>
 
