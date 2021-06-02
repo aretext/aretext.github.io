@@ -1,6 +1,7 @@
 :root {
   --fg-color: #1a1a1a;
   --bg-color: #fdfdfd;
+  --border-color: #e6e6e6;
   --quote-fg-color: #606060;
   --quote-border-color: #e6e6e6;
 }
@@ -9,6 +10,7 @@
   :root {
     --fg-color: #fdfdfd;
     --bg-color: black;
+    --border-color: #606060;
     --quote-fg-color: #e6e6e6;
     --quote-border-color: #606060;
   }
@@ -142,6 +144,8 @@ th {
 
 td {
   padding: 0.125em 0.5em 0.25em 0.5em;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-color);
 }
 
 header {
