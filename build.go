@@ -142,8 +142,8 @@ func rewriteLinks(node ast.Node) {
 			}
 
 			if !u.IsAbs() {
-				rewriteDst := markdownExtToHtml(string(link.Destination))
-				link.Destination = []byte(rewriteDst)
+				u.Path = markdownExtToHtml(string(u.Path))
+				link.Destination = []byte(u.String())
 			}
 		}
 		return mdast.GoToNext
