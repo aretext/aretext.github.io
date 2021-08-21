@@ -84,7 +84,10 @@ func markdownToHtml(tmpl *template.Template, srcPath, dstPath string) error {
 	if err != nil {
 		return errors.Wrapf(err, "os.ReadFile")
 	}
-	extensions := mdparser.CommonExtensions | mdparser.Footnotes | mdparser.AutoHeadingIDs
+	extensions := mdparser.NoIntraEmphasis | mdparser.Tables |
+		mdparser.FencedCode | mdparser.Autolink | mdparser.Strikethrough |
+		mdparser.SpaceHeadings | mdparser.HeadingIDs | mdparser.BackslashLineBreak |
+		mdparser.DefinitionLists | mdparser.Footnotes | mdparser.AutoHeadingIDs
 	parser := mdparser.NewWithExtensions(extensions)
 	astNode := markdown.Parse(md, parser)
 	rewriteLinks(astNode)
