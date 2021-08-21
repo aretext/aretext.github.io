@@ -16,11 +16,16 @@
 
 <h2 id="normal-mode-commands">Normal Mode Commands</h2>
 
+<p>Some commands may be prefixed with a number <em>count</em> to repeat the command <em>count</em> times. For example &quot;5x&quot; deletes the next five characters.</p>
+
+<p>Commands that interact with the clipboard accept a <em>clipboard page</em> prefix of the form <code>&quot;[a-z]</code>, where the letter is the name of the page. If not provided, a default (unnamed) page is used.</p>
+
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Key Binding</th>
+<th>Options</th>
 </tr>
 </thead>
 
@@ -28,301 +33,463 @@
 <tr>
 <td>cursor left</td>
 <td>left arrow</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor right</td>
 <td>right arrow</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor up</td>
 <td>up arrow</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor down</td>
 <td>down arrow</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor left</td>
 <td>h</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor right</td>
 <td>l</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor up</td>
 <td>k</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor down</td>
 <td>j</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor back</td>
 <td>backspace</td>
+<td></td>
+</tr>
+
+<tr>
+<td>cursor to next matching character in line</td>
+<td>f{char}</td>
+<td>count</td>
+</tr>
+
+<tr>
+<td>cursor to prev matching character in line</td>
+<td>F{char}</td>
+<td>count</td>
+</tr>
+
+<tr>
+<td>cursor till next matching character in line</td>
+<td>t{char}</td>
+<td>count</td>
+</tr>
+
+<tr>
+<td>cursor till prev matching character in line</td>
+<td>T{char}</td>
+<td>count</td>
 </tr>
 
 <tr>
 <td>cursor next word start</td>
 <td>w</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor prev word start</td>
 <td>b</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor next word end</td>
 <td>e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor prev paragraph</td>
 <td>{</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor next paragraph</td>
 <td>}</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor line start</td>
 <td>0</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor line start after indentation</td>
 <td>^</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor line end</td>
 <td>$</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor start of first line</td>
 <td>gg</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor start of line number</td>
 <td>{count}gg</td>
+<td></td>
 </tr>
 
 <tr>
 <td>cursor start of last line</td>
 <td>G</td>
+<td></td>
 </tr>
 
 <tr>
 <td>scroll up</td>
 <td>ctrl-u</td>
+<td></td>
 </tr>
 
 <tr>
 <td>scroll down</td>
 <td>ctrl-d</td>
-</tr>
-
-<tr>
-<td>delete next character in line</td>
-<td>x</td>
+<td></td>
 </tr>
 
 <tr>
 <td>insert</td>
 <td>i</td>
+<td></td>
 </tr>
 
 <tr>
 <td>insert at start of line</td>
 <td>I</td>
+<td></td>
 </tr>
 
 <tr>
 <td>append</td>
 <td>a</td>
+<td></td>
 </tr>
 
 <tr>
 <td>append at end of line</td>
 <td>A</td>
+<td></td>
 </tr>
 
 <tr>
 <td>new line below</td>
 <td>o</td>
+<td></td>
 </tr>
 
 <tr>
 <td>new line above</td>
 <td>O</td>
+<td></td>
 </tr>
 
 <tr>
 <td>join lines</td>
 <td>J</td>
+<td></td>
+</tr>
+
+<tr>
+<td>delete next character in line</td>
+<td>x</td>
+<td>count, clipboard page</td>
 </tr>
 
 <tr>
 <td>delete line</td>
 <td>dd</td>
+<td>count, clipboard page</td>
 </tr>
 
 <tr>
 <td>delete previous character in line</td>
 <td>dh</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete lines below</td>
 <td>dj</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete lines above</td>
 <td>dk</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
-<td>delete next characater in line</td>
+<td>delete next character in line</td>
 <td>dl</td>
+<td>count, clipboard page</td>
 </tr>
 
 <tr>
 <td>delete to end of line</td>
 <td>d$</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete to start of line</td>
 <td>d0</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete to start of line after indentation</td>
 <td>d^</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete to end of line</td>
 <td>D</td>
+<td>clipboard page</td>
+</tr>
+
+<tr>
+<td>delete to start of next word</td>
+<td>dw</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete a word</td>
 <td>daw</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete inner word</td>
 <td>diw</td>
+<td>clipboard page</td>
+</tr>
+
+<tr>
+<td>delete to next matching character in line</td>
+<td>df{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>delete to prev matching character in line</td>
+<td>dF{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>delete till next matching character in line</td>
+<td>dt{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>delete till prev matching character in line</td>
+<td>dT{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>change to start of next word</td>
+<td>cw</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>change a word</td>
 <td>caw</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>change inner word</td>
 <td>ciw</td>
+<td>clipboard page</td>
+</tr>
+
+<tr>
+<td>change to next matching character in line</td>
+<td>cf{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>change to prev matching character in line</td>
+<td>cF{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>change till next matching character in line</td>
+<td>ct{char}</td>
+<td>count, clipboard page</td>
+</tr>
+
+<tr>
+<td>change till prev matching character in line</td>
+<td>cT{char}</td>
+<td>count, clipboard page</td>
 </tr>
 
 <tr>
 <td>replace character</td>
 <td>r</td>
+<td></td>
 </tr>
 
 <tr>
 <td>toggle case</td>
 <td>~</td>
+<td></td>
 </tr>
 
 <tr>
 <td>indent line</td>
 <td>&gt;&gt;</td>
+<td></td>
 </tr>
 
 <tr>
 <td>outdent line</td>
 <td>&lt;&lt;</td>
+<td></td>
+</tr>
+
+<tr>
+<td>yank to start of next word</td>
+<td>yw</td>
+<td>clipboard page</td>
+</tr>
+
+<tr>
+<td>yank a word</td>
+<td>yaw</td>
+<td>clipboard page</td>
+</tr>
+
+<tr>
+<td>yank inner word</td>
+<td>yiw</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>yank line</td>
 <td>yy</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>put after cursor</td>
 <td>p</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>put before cursor</td>
 <td>P</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>show command menu</td>
 <td>:</td>
+<td></td>
 </tr>
 
 <tr>
 <td>start forward search</td>
 <td>/</td>
+<td></td>
 </tr>
 
 <tr>
 <td>start backward search</td>
 <td>?</td>
+<td></td>
 </tr>
 
 <tr>
 <td>find next match</td>
 <td>n</td>
+<td></td>
 </tr>
 
 <tr>
 <td>find previous match</td>
 <td>N</td>
+<td></td>
 </tr>
 
 <tr>
 <td>undo</td>
 <td>u</td>
+<td></td>
 </tr>
 
 <tr>
 <td>redo</td>
 <td>ctrl-r</td>
+<td></td>
 </tr>
 
 <tr>
 <td>visual mode charwise</td>
 <td>v</td>
+<td></td>
 </tr>
 
 <tr>
 <td>visual mode linewise</td>
 <td>V</td>
+<td></td>
 </tr>
 
 <tr>
 <td>repeat last action</td>
 <td>.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -334,6 +501,7 @@
 <tr>
 <th>Name</th>
 <th>Key Binding</th>
+<th>Options</th>
 </tr>
 </thead>
 
@@ -341,56 +509,67 @@
 <tr>
 <td>toggle visual mode charwise</td>
 <td>v</td>
+<td></td>
 </tr>
 
 <tr>
 <td>toggle visual mode linewise</td>
 <td>V</td>
+<td></td>
 </tr>
 
 <tr>
 <td>return to normal mode</td>
 <td>escape</td>
+<td></td>
 </tr>
 
 <tr>
 <td>show command menu</td>
 <td>:</td>
+<td></td>
 </tr>
 
 <tr>
 <td>delete selection</td>
 <td>x</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>delete selection</td>
 <td>d</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>change selection</td>
 <td>c</td>
+<td>clipboard page</td>
 </tr>
 
 <tr>
 <td>toggle case for selection</td>
 <td>~</td>
+<td></td>
 </tr>
 
 <tr>
 <td>indent selection</td>
 <td>&gt;</td>
+<td></td>
 </tr>
 
 <tr>
 <td>outdent selection</td>
 <td>&lt;</td>
+<td></td>
 </tr>
 
 <tr>
 <td>yank selection</td>
 <td>y</td>
+<td>clipboard page</td>
 </tr>
 </tbody>
 </table>
@@ -457,8 +636,18 @@
 </tr>
 
 <tr>
+<td>toggle show tabs</td>
+<td>ta</td>
+</tr>
+
+<tr>
 <td>toggle line numbers</td>
 <td>nu</td>
+</tr>
+
+<tr>
+<td>toggle auto-indent</td>
+<td>ai</td>
 </tr>
 
 <tr>
@@ -478,6 +667,16 @@
 
 <tr>
 <td>set syntax go</td>
+<td></td>
+</tr>
+
+<tr>
+<td>set syntax gitcommit</td>
+<td></td>
+</tr>
+
+<tr>
+<td>set syntax gitrebase</td>
 <td></td>
 </tr>
 </tbody>

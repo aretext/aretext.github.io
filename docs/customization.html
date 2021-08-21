@@ -22,13 +22,14 @@
 <li><a href="#example-format-current-file">Format a file</a></li>
 <li><a href="#example-insert-snippet">Insert a snippet</a></li>
 <li><a href="#example-grep">Search a project with grep</a></li>
+<li><a href="#example-split-tmux-window">Open the current document in a new tmux window</a></li>
 </ul>
 
 <p>... and much more!</p>
 
 <h2 id="configuration-rules">Configuration rules</h2>
 
-<p>Aretext stores its configuration in a single YAML file located at <code>~/.config/aretext/config.yaml</code>. If you open it, you should see something like this:</p>
+<p>Aretext stores its configuration in a single YAML file. By default, the config file is located at <code>~/.config/aretext/config.yaml</code>, but you can change the location by setting the <code>XDG_CONFIG_HOME</code> env var (following the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a>). If you open the config file, you should see something like:</p>
 
 <pre><code>- name: default
   pattern: &quot;**&quot;
@@ -54,7 +55,7 @@
 
 <p>Each rule has a <em>pattern</em>. The &quot;**&quot; is a wildcard that matches any subdirectory, and &quot;*&quot; is a wildcard that matches zero or more characters in a file or directory name.</p>
 
-<p>When aretext loads a file, it checks each rule in order. If the rule's pattern matches the file path, it applies the rule to update the configuration.</p>
+<p>When aretext loads a file, it checks each rule in order. If the rule's pattern matches the file's absolute path, it applies the rule to update the configuration.</p>
 
 <p>For example, if aretext loaded the file &quot;foo/bar.json&quot; using the above configuration, both rules would match the filename. The resulting configuration would be:</p>
 
@@ -83,6 +84,10 @@
   config:
     tabSize: 4
 </code></pre>
+
+<h2 id="configuration-reference">Configuration Reference</h2>
+
+<p>For a complete list of available configuration options, see <a href="config-reference.html">Configuration Reference</a>.</p>
 
 <h2 id="fixing-configuration-errors">Fixing configuration errors</h2>
 
@@ -271,6 +276,18 @@
 <p>Once the search has completed, aretext loads the locations into a searchable menu. This allows you to easily navigate to a particular result.</p>
 
 <p>The &quot;fileLocations&quot; mode works with any command that outputs file locations as lines with the format: <code>&lt;file&gt;:&lt;line&gt;:&lt;snippet&gt;</code> or <code>&lt;file&gt;:&lt;line&gt;:&lt;col&gt;:&lt;snippet&gt;</code>. You can use grep, ripgrep, or a script you write yourself!</p>
+
+<h3 id="example-split-tmux-window">Example: Split tmux window</h3>
+
+<p>If you use <a href="https://wiki.archlinux.org/title/Tmux">tmux</a>, you can add a custom menu command to open the current document in a new window.</p>
+
+<pre><code>- name: split window horizontal
+  shellCmd: tmux split-window -h &quot;aretext $FILEPATH&quot;
+  mode: silent
+- name: split window vertical
+  shellCmd: tmux split-window -v &quot;aretext $FILEPATH&quot;
+  mode: silent
+</code></pre>
 
 </body>
 </html>

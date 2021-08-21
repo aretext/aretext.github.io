@@ -30,13 +30,15 @@
 
 <p>To move the cursor to the end of the current line, type &quot;$&quot; in normal mode.</p>
 
+<h2 id="next-or-previous-matching-character">Next or previous matching character</h2>
+
+<p>To move the cursor forward to the next matching character on a line, type &quot;f{char}&quot; in normal mode, where &quot;{char}&quot; is the character to match. To move the cursor up to, but not on, that character use &quot;t{char}&quot;.</p>
+
+<p>Similarly, to move the cursor backwards to a matching char, use &quot;F{char}&quot; and &quot;T{char}&quot;.</p>
+
 <h2 id="word-movement">Word movement</h2>
 
-<p>A &quot;word&quot; in aretext is a sequence of characters separated by whitespace.</p>
-
-<p>If syntax highlighting is enabled, then the syntax language will define additional word boundaries. For example, when editing Go code, the text <code>foo.Bar</code> would treat <code>foo</code>, <code>.</code>, and <code>Bar</code> as separate words because the Go compiler would recognize these as separate tokens.</p>
-
-<p>To move the cursor forward to the next word, press &quot;w&quot; in normal mode. Use &quot;e&quot; to move the cursor to the <em>end</em> of the current word, and &quot;b&quot; to move the cursor <em>back</em> to the start of the previous word.</p>
+<p>A &quot;word&quot; in aretext is a sequence of characters separated by whitespace or punctuation. To move the cursor forward to the next word, press &quot;w&quot; in normal mode. Use &quot;e&quot; to move the cursor to the <em>end</em> of the current word, and &quot;b&quot; to move the cursor <em>back</em> to the start of the previous word.</p>
 
 <h2 id="paragraph-movement">Paragraph movement</h2>
 
