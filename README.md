@@ -1,7 +1,7 @@
 aretext.github.io
 -----------------
 
-Website for the [aretext](github.com/aretext/aretext) editor.
+Website for the [aretext](https://github.com/aretext/aretext) editor.
 
 Building the site
 =================
