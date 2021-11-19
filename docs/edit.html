@@ -104,9 +104,24 @@
 
 <p>Aretext clears the undo history whenever a document is loaded or reloaded.</p>
 
-<h2 id="repeat-last-action-macros">Repeat last action (macros)</h2>
+<h2 id="repeat-last-action">Repeat last action</h2>
 
 <p>To repeat the last action, type &quot;.&quot; in normal mode. This is useful for avoiding repetitive typing.</p>
+
+<h2 id="record-and-replay-a-macro">Record and replay a macro</h2>
+
+<p>To repeat a sequence of commands, you can record a macro.</p>
+
+<ol>
+<li>In normal mode, type &quot;:&quot; to open the command menu.</li>
+<li>Search for and select &quot;start/stop recording macro&quot; to begin recording a macro.</li>
+<li>Edit the document. Any changes you make will be recorded in the macro.</li>
+<li>In the command menu, select &quot;start/stop recording macro&quot; again to stop recording the macro.</li>
+</ol>
+
+<p>To replay the recorded macro, select &quot;replay macro&quot; in the command menu.</p>
+
+<p>Once you have replayed a macro, you can repeat it using the &quot;.&quot; (repeat last action) command in normal mode.</p>
 
 </body>
 </html>

@@ -29,7 +29,14 @@
 
 <h2 id="configuration-rules">Configuration rules</h2>
 
-<p>Aretext stores its configuration in a single YAML file. By default, the config file is located at <code>~/.config/aretext/config.yaml</code>, but you can change the location by setting the <code>XDG_CONFIG_HOME</code> env var (following the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a>). If you open the config file, you should see something like:</p>
+<p>Aretext stores its configuration in a single YAML file. You can edit the config file using the <code>-editconfig</code> flag:</p>
+
+<pre><code>aretext -editconfig
+</code></pre>
+
+<p>The configuration file is located at <code>$XDG_CONFIG_HOME/aretext/config.yaml</code>, where <code>XDG_CONFIG_HOME</code> is configured according to the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a>. On Linux, this defaults to <code>~/.config</code>, and on macOS it defaults to <code>~/Library/Application Support</code>.</p>
+
+<p>When you open the config file, you should see something like:</p>
 
 <pre><code>- name: default
   pattern: &quot;**&quot;
@@ -93,7 +100,7 @@
 
 <p>If your YAML config file has errors, aretext will exit with an error message. You can force aretext to ignore the config file by passing the &quot;-noconfig&quot; flag:</p>
 
-<pre><code>aretext -noconfig ~/.config/aretext/config.yaml
+<pre><code>aretext -editconfig -noconfig
 </code></pre>
 
 <p>This allows you to start the editor so you can fix the configuration.</p>
@@ -102,7 +109,7 @@
 
 <p>Aretext allows you to define custom menu items to run shell commands. This provides a simple, yet powerful, way to extend aretext.</p>
 
-<p>You can add new menu commands by editing the YAML config file at <code>~/.config/aretext/config.yaml</code>:</p>
+<p>You can add new menu commands by editing the config file:</p>
 
 <pre><code>- name: custom-menu-rule
   pattern: &quot;**/myproject/**&quot;
@@ -217,9 +224,11 @@
 </tr>
 </tbody>
 </table>
-<p>We can add custom menu commands to copy the current selection to the system clipboard and paste from the system clipboard into the document. For example, on Wayland:</p>
+<p>We can add custom menu commands to copy the current selection to the system clipboard and paste from the system clipboard into the document.</p>
 
-<pre><code>- name: custom-clipboard-commands
+<p>On Linux (Wayland):</p>
+
+<pre><code>- name: linux-wayland-clipboard-commands
   pattern: &quot;**&quot;
   config:
     menuCommands:
@@ -229,6 +238,34 @@
       - name: paste from clipboard
         shellCmd: wl-paste
         mode: insert
+</code></pre>
+
+<p>On macOS:</p>
+
+<pre><code>- name: macos-clipboard-commands
+  pattern: &quot;**&quot;
+  config:
+    menuCommands:
+      - name: copy to clipboard
+        shellCmd: printenv SELECTION | pbcopy
+        mode: silent
+      - name: paste from clipboard
+        shellCmd: pbpaste
+        mode: insert
+</code></pre>
+
+<p>Using tmux:</p>
+
+<pre><code>- name: tmux-clipboard-commands
+  pattern: &quot;**&quot;
+  config:
+    menuCommands:
+    - name: copy to clipboard
+      shellCmd: printenv SELECTION | tmux load-buffer -
+      mode: silent
+    - name: paste from clipboard
+      shellCmd: tmux show-buffer
+      mode: insert
 </code></pre>
 
 <h3 id="example-format-current-file">Example: Format current file</h3>
@@ -242,7 +279,7 @@
   config:
     menuCommands:
       - name: go fmt current file
-        shellCmd: go fmt -w $FILEPATH | less
+        shellCmd: go fmt $FILEPATH | less
 </code></pre>
 
 <p>If there are no unsaved changes, aretext will automatically reload the file after it has been formatted.</p>
@@ -256,9 +293,10 @@
 <pre><code>- name: custom-snippet-command
   pattern: &quot;**/*.go&quot;
   config:
-    - name: insert test snippet
-      shellCmd: cat ~/snippets/go-test.go
-      mode: insert
+    menuCommands:
+      - name: insert test snippet
+        shellCmd: cat ~/snippets/go-test.go
+        mode: insert
 </code></pre>
 
 <h3 id="example-grep">Example: Grep</h3>
@@ -268,9 +306,10 @@
 <pre><code>- name: custom-grep-command
   pattern: &quot;**&quot;
   config:
-    - name: rg word
-      shellCmd: rg $WORD --vimgrep  # or `grep $WORD -n -R .`
-      mode: fileLocations
+    menuCommands:
+      - name: rg word
+        shellCmd: rg $WORD --vimgrep  # or `grep $WORD -n -R .`
+        mode: fileLocations
 </code></pre>
 
 <p>Once the search has completed, aretext loads the locations into a searchable menu. This allows you to easily navigate to a particular result.</p>

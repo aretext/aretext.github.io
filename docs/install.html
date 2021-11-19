@@ -27,38 +27,27 @@
 </tr>
 
 <tr>
-<td>*BSD</td>
-<td>Will probably work</td>
-</tr>
-
-<tr>
 <td>macOS</td>
-<td>Will probably work</td>
+<td>Fully supported</td>
 </tr>
 
 <tr>
 <td>Windows</td>
 <td>Supported on WSL only</td>
 </tr>
+
+<tr>
+<td>*BSD</td>
+<td>Will probably work</td>
+</tr>
 </tbody>
 </table>
 
-<h2 id="stable-releases">Stable Releases</h2>
+<h2 id="official-binaries">Official Binaries</h2>
 
-<h3 id="official-binaries">Official Binaries</h3>
+<p>You can download the official binaries for Linux and macOS from <a href="https://github.com/aretext/aretext/releases">the aretext releases page</a>.</p>
 
-<p>You can download the official binaries from <a href="https://github.com/aretext/aretext/releases">the aretext releases page</a>.</p>
-
-<h3 id="arch-linux">Arch Linux</h3>
-
-<p>aretext is available as an <a href="https://aur.archlinux.org/packages/aretext-bin/">AUR Package</a>. If you use <a href="https://github.com/Jguer/yay">yay</a>, run this to install it:</p>
-
-<pre><code class="language-shell">yay -S aretext
-</code></pre>
-
-<h2 id="unstable-builds">Unstable Builds</h2>
-
-<h3 id="from-source">From source</h3>
+<h2 id="build-from-source">Build From Source</h2>
 
 <p>If you have <a href="https://golang.org/doc/install">installed go</a>, then you can build aretext from source:</p>
 
@@ -70,6 +59,17 @@ make install
 <p>This will install aretext in <code>$HOME/go/bin</code>, which you can add to your <code>$PATH</code>:</p>
 
 <pre><code>export PATH=$PATH:$HOME/go/bin
+</code></pre>
+
+<h2 id="packages">Packages</h2>
+
+<p>If a package is not yet available for your platform, please consider creating one! We are looking for package maintainers on Debian, Fedora, Homebrew, Nix, and any other platform you may prefer!</p>
+
+<h3 id="arch-linux">Arch Linux</h3>
+
+<p>aretext is available as an <a href="https://aur.archlinux.org/packages/aretext-bin/">AUR Package</a>. If you use <a href="https://github.com/Jguer/yay">yay</a>, run this to install it:</p>
+
+<pre><code class="language-shell">yay -S aretext
 </code></pre>
 
 </body>
