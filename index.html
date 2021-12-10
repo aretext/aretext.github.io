@@ -6,26 +6,33 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/landing.css">
   <link rel="icon" type="image/x-icon" href="data:,">
-  <title>aretext : minimalist text editor that never slows you down</title>
+  <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+  <title>aretext : minimalist text editor with vim-compatible key bindings</title>
 </head>
 <body>
   <header class="hero">
     <h1>aretext</h1>
-    <p>Minimalist text editor that never slows you down.</p>
+    <p>Minimalist text editor with vim-compatible key bindings.</p>
     <p><a href="docs/install.html">Install</a></p>
-    <img src="screenshot.gif" alt="screenshot of the aretext editor"/>
+    <asciinema-player src="/demo.cast" autoplay="1" speed="1.5"></asciinema-player>
   </header>
 
   <main>
     <h2>Key Features</h2>
     <ul>
       <li><b>Vim-compatible</b>: edit efficiently with <a href="docs/command-reference.html">vim-compatible key bindings</a>.</li>
-      <li><b>Searchable menus</b>: quickly find files and commands.</li>
-      <li><b>Intuitive config</b>: easily <a href="docs/customization.html">customize settings and menu commands</a> for different projects.</li>
+      <li><b>Built-in fuzzy search</b>: quickly find files and commands.</li>
+      <li><b>Intuitive config</b>: easily <a href="docs/customization.html">customize settings</a> in a single YAML file.</li>
     </ul>
 
     <h2>Documentation</h2>
     See the <a href="docs/index.html">User Documentation</a> to get started!
+
+    <h2>Open Source</h2>
+    <ul>
+      <li>Aretext will always be free and open-source under the <a href="https://github.com/aretext/aretext/blob/main/LICENSE">GPL v3 license</a>.</li>
+      <li>Source code is available <a href="https://github.com/aretext/aretext">on GitHub</a>.</li>
+    </ul>
 
     <h2>Latest Release</h2>
     <p>Version 0.3 ("Russell") was released 2021-11-19.</p>
@@ -36,12 +43,7 @@
       <li>Syntax highlighting is available for a few languages (Go, Python, C, Rust, YAML, JSON).</li>
       <li>Many important vim commands are supported, but there are many more to add!</li>
     </ul>
-
-    <h2>Open Source</h2>
-    <ul>
-      <li>Aretext will always be free and open-source under the <a href="https://github.com/aretext/aretext/blob/main/LICENSE">GPL v3 license</a>.</li>
-      <li>Source code is available <a href="https://github.com/aretext/aretext">on GitHub</a>.</li>
-    </ul>
   </main>
+  <script src="/asciinema-player.js"></script>
 </body>
 </html>
