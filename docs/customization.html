@@ -67,12 +67,12 @@
 <p>For example, if aretext loaded the file &quot;foo/bar.json&quot; using the above configuration, both rules would match the filename. The resulting configuration would be:</p>
 
 <pre><code>config:
-    autoIndent: true           # from the &quot;json&quot; rule
-    hideDirectories: [&quot;.git&quot;]  # from the &quot;default&quot; rule
-    syntaxLanguage: json       # from the &quot;json&quot; rule
-    tabExpand: true            # from the &quot;json&quot; rule
-    tabSize: 2                 # from the &quot;json&quot; rule
-    showLineNumbers: true      # from the &quot;json&quot; rule
+  autoIndent: true           # from the &quot;json&quot; rule
+  hideDirectories: [&quot;.git&quot;]  # from the &quot;default&quot; rule
+  syntaxLanguage: json       # from the &quot;json&quot; rule
+  tabExpand: true            # from the &quot;json&quot; rule
+  tabSize: 2                 # from the &quot;json&quot; rule
+  showLineNumbers: true      # from the &quot;json&quot; rule
 </code></pre>
 
 <p>When merging configurations from different rules:</p>
@@ -86,7 +86,7 @@
 <p>This is a powerful mechanism for customizing configuration based on filename extension and/or project location. For example, suppose that one project you work on uses four spaces to indent JSON files. You could add a new rule to your config that overwrites the tabSize for JSON files in that specific project:</p>
 
 <pre><code># ... other rules above ...
-- name: myproject-json
+- name: myproject json
   pattern: &quot;**/myproject/**/*.json&quot;
   config:
     tabSize: 4
@@ -111,13 +111,13 @@
 
 <p>You can add new menu commands by editing the config file:</p>
 
-<pre><code>- name: custom-menu-rule
+<pre><code>- name: custom menu rule
   pattern: &quot;**/myproject/**&quot;
   config:
     menuCommands:
-      - name: my custom menu command
-        shellCmd: echo 'hello world!' | less
-        mode: terminal  # or &quot;silent&quot; or &quot;insert&quot; or &quot;fileLocations&quot;
+    - name: my custom menu command
+      shellCmd: echo 'hello world!' | less
+      mode: terminal  # or &quot;silent&quot; or &quot;insert&quot; or &quot;fileLocations&quot;
 </code></pre>
 
 <p>After restarting the editor, the new command will be available in the command menu. Selecting the new command will launch a shell (configured by the <code>$SHELL</code> environment variable) and execute the shell command (in this case, echoing &quot;hello world&quot;).</p>
@@ -176,13 +176,12 @@
 
 <p>Add a menu command to build a project using <code>make</code>. Piping to <code>less</code> allows us to page through the output.</p>
 
-<pre><code>- name: custom-make-cmd
+<pre><code>- name: custom make cmd
   pattern: &quot;**/myproject/**&quot;
   config:
     menuCommands:
-      - name: build
-        shellCmd: make | less
-        # default mode is &quot;terminal&quot;
+    - name: build
+      shellCmd: make | less
 </code></pre>
 
 <h3 id="example-copy-and-paste-using-the-system-clipboard">Example: Copy and paste using the system clipboard</h3>
@@ -228,21 +227,21 @@
 
 <p>On Linux (Wayland):</p>
 
-<pre><code>- name: linux-wayland-clipboard-commands
+<pre><code>- name: linux wayland clipboard commands
   pattern: &quot;**&quot;
   config:
     menuCommands:
-      - name: copy to clipboard
-        shellCmd: wl-copy &quot;$SELECTION&quot;
-        mode: silent
-      - name: paste from clipboard
-        shellCmd: wl-paste
-        mode: insert
+    - name: copy to clipboard
+      shellCmd: wl-copy &quot;$SELECTION&quot;
+      mode: silent
+    - name: paste from clipboard
+      shellCmd: wl-paste
+      mode: insert
 </code></pre>
 
 <p>On macOS:</p>
 
-<pre><code>- name: macos-clipboard-commands
+<pre><code>- name: macos clipboard commands
   pattern: &quot;**&quot;
   config:
     menuCommands:
@@ -256,7 +255,7 @@
 
 <p>Using tmux:</p>
 
-<pre><code>- name: tmux-clipboard-commands
+<pre><code>- name: tmux clipboard commands
   pattern: &quot;**&quot;
   config:
     menuCommands:
@@ -274,12 +273,12 @@
 
 <p>For example, this command uses <code>go fmt</code> to format a Go file:</p>
 
-<pre><code>- name: custom-fmt-command
+<pre><code>- name: custom fmt command
   pattern: &quot;**/*.go&quot;
   config:
     menuCommands:
-      - name: go fmt current file
-        shellCmd: go fmt $FILEPATH | less
+    - name: go fmt current file
+      shellCmd: go fmt $FILEPATH | less
 </code></pre>
 
 <p>If there are no unsaved changes, aretext will automatically reload the file after it has been formatted.</p>
@@ -290,26 +289,26 @@
 
 <p>For example, suppose you have written a template for a Go test. You can then create a menu command to <code>cat</code> the contents of the file into the document:</p>
 
-<pre><code>- name: custom-snippet-command
+<pre><code>- name: custom snippet command
   pattern: &quot;**/*.go&quot;
   config:
     menuCommands:
-      - name: insert test snippet
-        shellCmd: cat ~/snippets/go-test.go
-        mode: insert
+    - name: insert test snippet
+      shellCmd: cat ~/snippets/go-test.go
+      mode: insert
 </code></pre>
 
 <h3 id="example-grep">Example: Grep</h3>
 
 <p>You can add a custom menu command to grep for the word under the cursor. The following example uses <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> to perform the search:</p>
 
-<pre><code>- name: custom-grep-command
+<pre><code>- name: custom grep command
   pattern: &quot;**&quot;
   config:
     menuCommands:
-      - name: rg word
-        shellCmd: rg $WORD --vimgrep  # or `grep $WORD -n -R .`
-        mode: fileLocations
+    - name: rg word
+      shellCmd: rg $WORD --vimgrep  # or `grep $WORD -n -R .`
+      mode: fileLocations
 </code></pre>
 
 <p>Once the search has completed, aretext loads the locations into a searchable menu. This allows you to easily navigate to a particular result.</p>
@@ -320,12 +319,16 @@
 
 <p>If you use <a href="https://wiki.archlinux.org/title/Tmux">tmux</a>, you can add a custom menu command to open the current document in a new window.</p>
 
-<pre><code>- name: split window horizontal
-  shellCmd: tmux split-window -h &quot;aretext $FILEPATH&quot;
-  mode: silent
-- name: split window vertical
-  shellCmd: tmux split-window -v &quot;aretext $FILEPATH&quot;
-  mode: silent
+<pre><code>- name: tmux window commands
+  pattern: &quot;**&quot;
+  config:
+    menuCommands:
+    - name: split window horizontal
+      shellCmd: tmux split-window -h &quot;aretext $FILEPATH&quot;
+      mode: silent
+    - name: split window vertical
+      shellCmd: tmux split-window -v &quot;aretext $FILEPATH
+      mode: silent
 </code></pre>
 
 </body>

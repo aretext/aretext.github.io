@@ -47,6 +47,42 @@
 
 <p>You can download the official binaries for Linux and macOS from <a href="https://github.com/aretext/aretext/releases">the aretext releases page</a>.</p>
 
+<h3 id="linux-x86-64-bit">Linux x86 64-bit</h3>
+
+<pre><code>VERSION=0.3.0
+RELEASE=aretext_${VERSION}_linux_amd64
+curl -LO https://github.com/aretext/aretext/releases/download/v$VERSION/$RELEASE.tar.gz
+tar -zxvf $RELEASE.tar.gz
+sudo cp $RELEASE/aretext /usr/local/bin/
+</code></pre>
+
+<h3 id="linux-arm-64-bit">Linux ARM 64-bit</h3>
+
+<pre><code>VERSION=0.3.0
+RELEASE=aretext_${VERSION}_linux_arm64
+curl -LO https://github.com/aretext/aretext/releases/download/v$VERSION/$RELEASE.tar.gz
+tar -zxvf $RELEASE.tar.gz
+sudo cp $RELEASE/aretext /usr/local/bin/
+</code></pre>
+
+<h3 id="macos-x86-64-bit">macOS x86 64-bit</h3>
+
+<pre><code>VERSION=0.3.0
+RELEASE=aretext_${VERSION}_darwin_amd64
+curl -LO https://github.com/aretext/aretext/releases/download/v$VERSION/$RELEASE.tar.gz
+tar -zxvf $RELEASE.tar.gz
+sudo cp $RELEASE/aretext /usr/local/bin/
+</code></pre>
+
+<h3 id="macos-arm-64-bit">macOS ARM 64-bit</h3>
+
+<pre><code>VERSION=0.3.0
+RELEASE=aretext_${VERSION}_darwin_arm64
+curl -LO https://github.com/aretext/aretext/releases/download/v$VERSION/$RELEASE.tar.gz
+tar -zxvf $RELEASE.tar.gz
+sudo cp $RELEASE/aretext /usr/local/bin/
+</code></pre>
+
 <h2 id="build-from-source">Build From Source</h2>
 
 <p>If you have <a href="https://golang.org/doc/install">installed go</a>, then you can build aretext from source:</p>
