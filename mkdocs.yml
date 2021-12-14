@@ -1,6 +1,7 @@
 site_name: 'aretext documentation'
 site_dir: './site/docs'
 site_url: 'https://aretext.org/docs/'
+site_description: 'User documentation for aretext, a minimalist text editor with vim-compatible key bindings'
 docs_dir: './aretext/docs'
 repo_url: 'https://github.com/aretext/aretext'
 repo_name: 'aretext'
