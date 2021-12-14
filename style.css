@@ -8,8 +8,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg-color: #fdfdfd;
-    --bg-color: black;
+    --fg-color: #d0cfcc;
+    --bg-color: #171421;
     --border-color: #606060;
     --quote-fg-color: #e6e6e6;
     --quote-border-color: #606060;
