@@ -9,6 +9,7 @@ edit_uri: ''
 
 theme:
   name: material
+  font: false # do not load fonts from Google
   palette:
     - media: '(prefers-color-scheme: light)'
       scheme: default
