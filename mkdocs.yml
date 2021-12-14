@@ -36,5 +36,5 @@ nav:
     - 'edit.md'
     - 'customization.md'
   - 'Reference':
-    - 'command-reference.md'
-    - 'config-reference.md'
+    - 'Commands': 'command-reference.md'
+    - 'Configuration': 'config-reference.md'
