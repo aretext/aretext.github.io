@@ -34,7 +34,8 @@ nav:
     - 'files.md'
     - 'navigation.md'
     - 'edit.md'
-    - 'customization.md'
+    - 'configuration.md'
+    - 'custom-menu-commands.md'
   - 'Reference':
     - 'Commands': 'command-reference.md'
     - 'Configuration': 'config-reference.md'
