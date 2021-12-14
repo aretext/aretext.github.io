@@ -3,6 +3,14 @@ aretext.github.io
 
 Website for the [aretext](https://github.com/aretext/aretext) editor.
 
+Setup
+=====
+
+1. Install Python and pip.
+2. (Optional) Create and activate a virtualenv: `virtualenv venv && source venv/bin/activate`
+3. Install dependencies: `pip install -r requirements.txt`
+
+
 Building the site
 =================
 

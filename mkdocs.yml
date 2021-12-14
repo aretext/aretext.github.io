@@ -1,0 +1,40 @@
+site_name: 'aretext documentation'
+site_dir: './site/docs'
+docs_dir: './aretext/docs'
+repo_url: 'https://github.com/aretext/aretext'
+repo_name: 'aretext'
+edit_uri: ''
+
+theme:
+  name: material
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: 'teal'
+      accent: 'cyan'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: 'teal'
+      accent: 'cyan'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  icon:
+    repo: 'fontawesome/brands/github'
+
+nav:
+  - 'index.md'
+  - 'Getting Started':
+    - 'install.md'
+    - 'quickstart.md'
+  - 'User Guide':
+    - 'files.md'
+    - 'navigation.md'
+    - 'edit.md'
+    - 'customization.md'
+  - 'Reference':
+    - 'command-reference.md'
+    - 'config-reference.md'

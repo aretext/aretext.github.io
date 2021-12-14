@@ -4,10 +4,8 @@ clean:
 	git clean -xfd site
 
 build: clean
-	go run build.go --docsPath ./aretext/docs --outputDirPath site
+	mkdir -p ./site/docs
+	mkdocs build
 
 server:
-	go run server.go site
-
-fmt:
-	goimports -w *.go
+	python -m http.server 8080 --directory ./site
