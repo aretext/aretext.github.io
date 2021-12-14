@@ -53,15 +53,15 @@ p {
 }
 
 a {
-  color: var(--cta-bg);
+  color: var(--cta-hover-bg);
 }
 
 a:visited {
-  color: var(--cta-bg);
+  color: var(--cta-hover-bg);
 }
 
 a:hover {
-  color: var(--cta-hover-bg);
+  color: var(--cta-bg);
 }
 
 img {
