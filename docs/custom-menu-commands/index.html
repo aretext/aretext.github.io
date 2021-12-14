@@ -665,14 +665,14 @@
 <p>Aretext allows you to define custom menu items to run shell commands. This provides a simple, yet powerful, way to extend the editor.</p>
 <h2 id="adding-custom-menu-comands">Adding Custom Menu Comands</h2>
 <p>You can add new menu commands by <a href="../configuration/">editing the config file</a> to add this rule:</p>
-<pre><code>- name: custom menu rule
-  pattern: &quot;**/myproject/**&quot;
-  config:
-    menuCommands:
-    - name: my custom menu command
-      shellCmd: echo 'hello world!' | less
-      mode: terminal  # or &quot;silent&quot; or &quot;insert&quot; or &quot;fileLocations&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom menu rule</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**/myproject/**&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my custom menu command</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;hello world!&#39; | less</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terminal</span>  <span class="c1"># or &quot;silent&quot; or &quot;insert&quot; or &quot;fileLocations&quot;</span>
+</code></pre></div>
 <p>After restarting the editor, the new command will be available in the command menu. Selecting the new command will launch a shell (configured by the <code>$SHELL</code> environment variable) and execute the shell command (in this case, echoing "hello world").</p>
 <p>The "mode" parameter controls how aretext handles the command's input and output. There are four modes:</p>
 <table>
@@ -720,13 +720,13 @@
 <h2 id="examples">Examples</h2>
 <h3 id="build-a-project-with-make">Build a project with make</h3>
 <p>Add a menu command to build a project using <code>make</code>. Piping to <code>less</code> allows us to page through the output.</p>
-<pre><code>- name: custom make cmd
-  pattern: &quot;**/myproject/**&quot;
-  config:
-    menuCommands:
-    - name: build
-      shellCmd: make | less
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom make cmd</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**/myproject/**&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">build</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">make | less</span>
+</code></pre></div>
 <h3 id="copy-and-paste-using-the-system-clipboard">Copy and paste using the system clipboard</h3>
 <p>Most systems provide command-line utilities for interacting with the system clipboard.</p>
 <table>
@@ -761,88 +761,88 @@
 </table>
 <p>We can add custom menu commands to copy the current selection to the system clipboard and paste from the system clipboard into the document.</p>
 <p>On Linux (Wayland):</p>
-<pre><code>- name: linux wayland clipboard commands
-  pattern: &quot;**&quot;
-  config:
-    menuCommands:
-    - name: copy to clipboard
-      shellCmd: wl-copy &quot;$SELECTION&quot;
-      mode: silent
-    - name: paste from clipboard
-      shellCmd: wl-paste
-      mode: insert
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">linux wayland clipboard commands</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">copy to clipboard</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wl-copy &quot;$SELECTION&quot;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">silent</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">paste from clipboard</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wl-paste</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">insert</span>
+</code></pre></div>
 <p>On macOS:</p>
-<pre><code>- name: macos clipboard commands
-  pattern: &quot;**&quot;
-  config:
-    menuCommands:
-      - name: copy to clipboard
-        shellCmd: printenv SELECTION | pbcopy
-        mode: silent
-      - name: paste from clipboard
-        shellCmd: pbpaste
-        mode: insert
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">macos clipboard commands</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">copy to clipboard</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">printenv SELECTION | pbcopy</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">silent</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">paste from clipboard</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>        <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pbpaste</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>        <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">insert</span>
+</code></pre></div>
 <p>Using tmux:</p>
-<pre><code>- name: tmux clipboard commands
-  pattern: &quot;**&quot;
-  config:
-    menuCommands:
-    - name: copy to clipboard
-      shellCmd: printenv SELECTION | tmux load-buffer -
-      mode: silent
-    - name: paste from clipboard
-      shellCmd: tmux show-buffer
-      mode: insert
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tmux clipboard commands</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">copy to clipboard</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">printenv SELECTION | tmux load-buffer -</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">silent</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">paste from clipboard</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tmux show-buffer</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">insert</span>
+</code></pre></div>
 <h3 id="format-the-current-file">Format the current file</h3>
 <p>Many programming languages provide command line tools to automatically format code. You can add a custom menu command to run these tools on the current file.</p>
 <p>For example, this command uses <code>go fmt</code> to format a Go file:</p>
-<pre><code>- name: custom fmt command
-  pattern: &quot;**/*.go&quot;
-  config:
-    menuCommands:
-    - name: go fmt current file
-      shellCmd: go fmt $FILEPATH | less
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom fmt command</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**/*.go&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">go fmt current file</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">go fmt $FILEPATH | less</span>
+</code></pre></div>
 <p>If there are no unsaved changes, aretext will automatically reload the file after it has been formatted.</p>
 <h3 id="insert-a-snippet">Insert a snippet</h3>
 <p>You can add a custom menu command to insert a snippet of code.</p>
 <p>For example, suppose you have written a template for a Go test. You can then create a menu command to <code>cat</code> the contents of the file into the document:</p>
-<pre><code>- name: custom snippet command
-  pattern: &quot;**/*.go&quot;
-  config:
-    menuCommands:
-    - name: insert test snippet
-      shellCmd: cat ~/snippets/go-test.go
-      mode: insert
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom snippet command</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**/*.go&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">insert test snippet</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cat ~/snippets/go-test.go</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">insert</span>
+</code></pre></div>
 <h3 id="grep-for-the-word-under-the-cursor">Grep for the word under the cursor</h3>
 <p>You can add a custom menu command to grep for the word under the cursor. The following example uses <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> to perform the search:</p>
-<pre><code>- name: custom grep command
-  pattern: &quot;**&quot;
-  config:
-    menuCommands:
-    - name: rg word
-      shellCmd: rg $WORD --vimgrep  # or `grep $WORD -n -R .`
-      mode: fileLocations
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom grep command</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rg word</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rg $WORD --vimgrep</span>  <span class="c1"># or `grep $WORD -n -R .`</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fileLocations</span>
+</code></pre></div>
 <p>Once the search has completed, aretext loads the locations into a searchable menu. This allows you to easily navigate to a particular result.</p>
 <p>The "fileLocations" mode works with any command that outputs file locations as lines with the format: <code>&lt;file&gt;:&lt;line&gt;:&lt;snippet&gt;</code> or <code>&lt;file&gt;:&lt;line&gt;:&lt;col&gt;:&lt;snippet&gt;</code>. You can use grep, ripgrep, or a script you write yourself!</p>
 <h3 id="open-a-document-in-a-new-tmux-window">Open a document in a new tmux window</h3>
 <p>If you use <a href="https://wiki.archlinux.org/title/Tmux">tmux</a>, you can add a custom menu command to open the current document in a new window.</p>
-<pre><code>- name: tmux window commands
-  pattern: &quot;**&quot;
-  config:
-    menuCommands:
-    - name: split window horizontal
-      shellCmd: tmux split-window -h &quot;aretext $FILEPATH&quot;
-      mode: silent
-    - name: split window vertical
-      shellCmd: tmux split-window -v &quot;aretext $FILEPATH
-      mode: silent
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tmux window commands</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">split window horizontal</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tmux split-window -h &quot;aretext $FILEPATH&quot;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">silent</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">split window vertical</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tmux split-window -v &quot;aretext $FILEPATH</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">silent</span>
+</code></pre></div>
 
               
             </article>

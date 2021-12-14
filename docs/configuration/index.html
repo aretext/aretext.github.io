@@ -582,41 +582,41 @@
 <h1 id="configuration">Configuration</h1>
 <h2 id="editing-config">Editing Config</h2>
 <p>Aretext stores its configuration in a single YAML file. You can edit the config file using the <code>-editconfig</code> flag:</p>
-<pre><code>aretext -editconfig
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>aretext -editconfig
+</code></pre></div>
 <p>The configuration file is located at <code>$XDG_CONFIG_HOME/aretext/config.yaml</code>, where <code>XDG_CONFIG_HOME</code> is configured according to the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a>. On Linux, this defaults to <code>~/.config</code>, and on macOS it defaults to <code>~/Library/Application Support</code>.</p>
 <p>When you open the config file, you should see something like:</p>
-<pre><code>- name: default
-  pattern: &quot;**&quot;
-  config:
-    autoIndent: false
-    hideDirectories: [&quot;.git&quot;]
-    syntaxLanguage: plaintext
-    tabExpand: false
-    tabSize: 4
-    showLineNumbers: false
-
-- name: json
-  pattern: &quot;**/*.json&quot;
-  config:
-    autoIndent: true
-    syntaxLanguage: json
-    tabExpand: true
-    tabSize: 2
-    showLineNumbers: true
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="nt">autoIndent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="nt">hideDirectories</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.git&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="nt">syntaxLanguage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">plaintext</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="nt">tabExpand</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="nt">tabSize</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="nt">showLineNumbers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">json</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**/*.json&quot;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="nt">autoIndent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="nt">syntaxLanguage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">json</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="nt">tabExpand</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="nt">tabSize</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="nt">showLineNumbers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 <p>Each item in the configuration file describes a <em>rule</em>. For example, in the snippet above, the first rule is named "default" and the second rule is named "json".</p>
 <p>Each rule has a <em>pattern</em>. The "**" is a wildcard that matches any subdirectory, and "*" is a wildcard that matches zero or more characters in a file or directory name.</p>
 <p>When aretext loads a file, it checks each rule in order. If the rule's pattern matches the file's absolute path, it applies the rule to update the configuration.</p>
 <p>For example, if aretext loaded the file "foo/bar.json" using the above configuration, both rules would match the filename. The resulting configuration would be:</p>
-<pre><code>config:
-  autoIndent: true           # from the &quot;json&quot; rule
-  hideDirectories: [&quot;.git&quot;]  # from the &quot;default&quot; rule
-  syntaxLanguage: json       # from the &quot;json&quot; rule
-  tabExpand: true            # from the &quot;json&quot; rule
-  tabSize: 2                 # from the &quot;json&quot; rule
-  showLineNumbers: true      # from the &quot;json&quot; rule
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>  <span class="nt">autoIndent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>           <span class="c1"># from the &quot;json&quot; rule</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>  <span class="nt">hideDirectories</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.git&quot;</span><span class="p p-Indicator">]</span>  <span class="c1"># from the &quot;default&quot; rule</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>  <span class="nt">syntaxLanguage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">json</span>       <span class="c1"># from the &quot;json&quot; rule</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="nt">tabExpand</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>            <span class="c1"># from the &quot;json&quot; rule</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>  <span class="nt">tabSize</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>                 <span class="c1"># from the &quot;json&quot; rule</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  <span class="nt">showLineNumbers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>      <span class="c1"># from the &quot;json&quot; rule</span>
+</code></pre></div>
 <p>When merging configurations from different rules:</p>
 <ul>
 <li>For strings and numbers, the values from later rules overwrite the values from previous rules.</li>
@@ -624,16 +624,16 @@
 <li>For dictionaries, the keys from later rules are added to the merged dictionary, potentially overwriting keys set by previous rules.</li>
 </ul>
 <p>This is a powerful mechanism for customizing configuration based on filename extension and/or project location. For example, suppose that one project you work on uses four spaces to indent JSON files. You could add a new rule to your config that overwrites the tabSize for JSON files in that specific project:</p>
-<pre><code># ... other rules above ...
-- name: myproject json
-  pattern: &quot;**/myproject/**/*.json&quot;
-  config:
-    tabSize: 4
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># ... other rules above ...</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myproject json</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;**/myproject/**/*.json&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="nt">config</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="nt">tabSize</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+</code></pre></div>
 <h2 id="fixing-configuration-errors">Fixing configuration errors</h2>
 <p>If your YAML config file has errors, aretext will exit with an error message. You can force aretext to ignore the config file by passing the "-noconfig" flag:</p>
-<pre><code>aretext -editconfig -noconfig
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>aretext -editconfig -noconfig
+</code></pre></div>
 <p>This allows you to start the editor so you can fix the configuration.</p>
 <h2 id="configuration-reference">Configuration Reference</h2>
 <p>For a complete list of available configuration options, see <a href="../config-reference/">Configuration Reference</a>.</p>
