@@ -13,7 +13,7 @@
     
     
       
-        <title>Customization - aretext documentation</title>
+        <title>Custom menu commands - aretext documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#customization" class="md-skip">
+        <a href="#custom-menu-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Customization
+              Custom menu commands
             
           </span>
         </div>
@@ -372,6 +372,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -384,12 +398,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Customization
+          Custom menu commands
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Customization
+        Custom menu commands
       </a>
       
         
@@ -408,78 +422,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration-rules" class="md-nav__link">
-    Configuration rules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-reference" class="md-nav__link">
-    Configuration Reference
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fixing-configuration-errors" class="md-nav__link">
-    Fixing configuration errors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-menu-commands" class="md-nav__link">
-    Custom menu commands
-  </a>
-  
-    <nav class="md-nav" aria-label="Custom menu commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#example-make" class="md-nav__link">
     Example: Make
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-copy-and-paste-using-the-system-clipboard" class="md-nav__link">
     Example: Copy and paste using the system clipboard
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-format-current-file" class="md-nav__link">
     Example: Format current file
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-insert-snippet" class="md-nav__link">
     Example: Insert snippet
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-grep" class="md-nav__link">
     Example: Grep
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-split-tmux-window" class="md-nav__link">
     Example: Split tmux window
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -587,78 +567,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration-rules" class="md-nav__link">
-    Configuration rules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-reference" class="md-nav__link">
-    Configuration Reference
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fixing-configuration-errors" class="md-nav__link">
-    Fixing configuration errors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-menu-commands" class="md-nav__link">
-    Custom menu commands
-  </a>
-  
-    <nav class="md-nav" aria-label="Custom menu commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#example-make" class="md-nav__link">
     Example: Make
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-copy-and-paste-using-the-system-clipboard" class="md-nav__link">
     Example: Copy and paste using the system clipboard
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-format-current-file" class="md-nav__link">
     Example: Format current file
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-insert-snippet" class="md-nav__link">
     Example: Insert snippet
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-grep" class="md-nav__link">
     Example: Grep
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-split-tmux-window" class="md-nav__link">
     Example: Split tmux window
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -675,79 +621,9 @@
               
                 
 
-<h1 id="customization">Customization</h1>
-<p>This guide describes how to customize aretext for your workflows.</p>
-<p>Aretext uses a <a href="#configuration-rules">rule-based system for configuration</a>. This allows you to easily customize the editor for different programming languages and projects.</p>
-<p>In addition, you can define <a href="#custom-menu-commands">custom menu commands</a> that invoke arbitrary programs. This provides a simple yet powerful way to extend the editor. For example, you can create custom menu commands to:</p>
-<ul>
-<li><a href="#example-make">Build a project with make</a></li>
-<li><a href="#example-copy-and-paste-using-the-system-clipboard">Copy and paste using the system clipboard</a></li>
-<li><a href="#example-format-current-file">Format a file</a></li>
-<li><a href="#example-insert-snippet">Insert a snippet</a></li>
-<li><a href="#example-grep">Search a project with grep</a></li>
-<li><a href="#example-split-tmux-window">Open the current document in a new tmux window</a></li>
-</ul>
-<p>... and much more!</p>
-<h2 id="configuration-rules">Configuration rules</h2>
-<p>Aretext stores its configuration in a single YAML file. You can edit the config file using the <code>-editconfig</code> flag:</p>
-<pre><code>aretext -editconfig
-</code></pre>
-<p>The configuration file is located at <code>$XDG_CONFIG_HOME/aretext/config.yaml</code>, where <code>XDG_CONFIG_HOME</code> is configured according to the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a>. On Linux, this defaults to <code>~/.config</code>, and on macOS it defaults to <code>~/Library/Application Support</code>.</p>
-<p>When you open the config file, you should see something like:</p>
-<pre><code>- name: default
-  pattern: &quot;**&quot;
-  config:
-    autoIndent: false
-    hideDirectories: [&quot;.git&quot;]
-    syntaxLanguage: plaintext
-    tabExpand: false
-    tabSize: 4
-    showLineNumbers: false
-
-- name: json
-  pattern: &quot;**/*.json&quot;
-  config:
-    autoIndent: true
-    syntaxLanguage: json
-    tabExpand: true
-    tabSize: 2
-    showLineNumbers: true
-</code></pre>
-<p>Each item in the configuration file describes a <em>rule</em>. For example, in the snippet above, the first rule is named "default" and the second rule is named "json".</p>
-<p>Each rule has a <em>pattern</em>. The "**" is a wildcard that matches any subdirectory, and "*" is a wildcard that matches zero or more characters in a file or directory name.</p>
-<p>When aretext loads a file, it checks each rule in order. If the rule's pattern matches the file's absolute path, it applies the rule to update the configuration.</p>
-<p>For example, if aretext loaded the file "foo/bar.json" using the above configuration, both rules would match the filename. The resulting configuration would be:</p>
-<pre><code>config:
-  autoIndent: true           # from the &quot;json&quot; rule
-  hideDirectories: [&quot;.git&quot;]  # from the &quot;default&quot; rule
-  syntaxLanguage: json       # from the &quot;json&quot; rule
-  tabExpand: true            # from the &quot;json&quot; rule
-  tabSize: 2                 # from the &quot;json&quot; rule
-  showLineNumbers: true      # from the &quot;json&quot; rule
-</code></pre>
-<p>When merging configurations from different rules:</p>
-<ul>
-<li>For strings and numbers, the values from later rules overwrite the values from previous rules.</li>
-<li>For lists, the values from all rules are combined.</li>
-<li>For dictionaries, the keys from later rules are added to the merged dictionary, potentially overwriting keys set by previous rules.</li>
-</ul>
-<p>This is a powerful mechanism for customizing configuration based on filename extension and/or project location. For example, suppose that one project you work on uses four spaces to indent JSON files. You could add a new rule to your config that overwrites the tabSize for JSON files in that specific project:</p>
-<pre><code># ... other rules above ...
-- name: myproject json
-  pattern: &quot;**/myproject/**/*.json&quot;
-  config:
-    tabSize: 4
-</code></pre>
-<h2 id="configuration-reference">Configuration Reference</h2>
-<p>For a complete list of available configuration options, see <a href="../config-reference/">Configuration Reference</a>.</p>
-<h2 id="fixing-configuration-errors">Fixing configuration errors</h2>
-<p>If your YAML config file has errors, aretext will exit with an error message. You can force aretext to ignore the config file by passing the "-noconfig" flag:</p>
-<pre><code>aretext -editconfig -noconfig
-</code></pre>
-<p>This allows you to start the editor so you can fix the configuration.</p>
-<h2 id="custom-menu-commands">Custom menu commands</h2>
-<p>Aretext allows you to define custom menu items to run shell commands. This provides a simple, yet powerful, way to extend aretext.</p>
-<p>You can add new menu commands by editing the config file:</p>
+<h1 id="custom-menu-commands">Custom Menu Commands</h1>
+<p>Aretext allows you to define custom menu items to run shell commands. This provides a simple, yet powerful, way to extend the editor.</p>
+<p>You can add new menu commands by <a href="../configuration/">editing the config file</a> to add this rule:</p>
 <pre><code>- name: custom menu rule
   pattern: &quot;**/myproject/**&quot;
   config:
@@ -938,7 +814,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../edit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Edit" rel="prev">
+        <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -947,7 +823,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Edit
+              Configuration
             </div>
           </div>
         </a>
