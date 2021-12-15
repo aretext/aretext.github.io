@@ -1,0 +1,13 @@
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #00645a;
+  --md-typeset-a-color: #00645a;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #00645a;
+  --md-typeset-a-color: #00e9d2;
+}
+
+article a {
+  text-decoration: underline;
+}
