@@ -28,6 +28,12 @@ theme:
   icon:
     repo: 'fontawesome/brands/github'
 
+extra_css:
+  - '/stylesheets/docs-extra.css'
+
+extra:
+  generator: false
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
