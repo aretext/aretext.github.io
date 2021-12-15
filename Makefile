@@ -1,7 +1,7 @@
 all: build
 
 clean:
-	git clean -xfd site
+	git clean -xfd site/docs
 
 build: clean
 	mkdir -p ./site/docs
