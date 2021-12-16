@@ -10,6 +10,7 @@ edit_uri: ''
 theme:
   name: material
   font: false # do not load fonts from Google
+  favicon: '/images/favicon.png'
   palette:
     - media: '(prefers-color-scheme: light)'
       scheme: default
