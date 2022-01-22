@@ -414,15 +414,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fixing-configuration-errors" class="md-nav__link">
-    Fixing configuration errors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-reference" class="md-nav__link">
-    Configuration Reference
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
 </li>
@@ -552,15 +545,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fixing-configuration-errors" class="md-nav__link">
-    Fixing configuration errors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-reference" class="md-nav__link">
-    Configuration Reference
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
 </li>
@@ -629,11 +615,20 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="nt">config</span><span class="p">:</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="nt">tabSize</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
 </code></pre></div>
-<h2 id="fixing-configuration-errors">Fixing configuration errors</h2>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h1 id="fixing-errors-on-startup">Fixing errors on startup</h1>
 <p>If your YAML config file has errors, aretext will exit with an error message. You can force aretext to ignore the config file by passing the "-noconfig" flag:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>aretext -editconfig -noconfig
 </code></pre></div>
 <p>This allows you to start the editor so you can fix the configuration.</p>
+<h1 id="checking-which-rules-were-applied">Checking which rules were applied</h1>
+<p>To see which configuration rules aretext applied when loading a file, start aretext with logging enabled:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>aretext -log debug.log
+</code></pre></div>
+<p>If you view the file <code>debug.log</code>, you should see lines like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Applying config rule &#39;default&#39; with pattern &#39;**&#39; for path &#39;path/to/file.txt&#39;
+</code></pre></div>
+<p>This tells you which rules aretext applied when opening a file, which can help you debug your configuration.</p>
 <h2 id="configuration-reference">Configuration Reference</h2>
 <p>For a complete list of available configuration options, see <a href="../config-reference/">Configuration Reference</a>.</p>
 

@@ -725,6 +725,7 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">build</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">make | less</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>      <span class="nt">save</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># save the file before running `make`</span>
 </code></pre></div>
 <h3 id="copy-and-paste-using-the-system-clipboard">Copy and paste using the system clipboard</h3>
 <p>Most systems provide command-line utilities for interacting with the system clipboard. Custom menu commands can invoke these tools to copy the current selection and paste into the document.</p>
@@ -773,8 +774,8 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nt">menuCommands</span><span class="p">:</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">go fmt current file</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>      <span class="nt">shellCmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">go fmt $FILEPATH | less</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>      <span class="nt">save</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># save the file before running `go fmt`</span>
 </code></pre></div>
-<p>If there are no unsaved changes, aretext will automatically reload the file after it has been formatted.</p>
 <h3 id="insert-a-snippet">Insert a snippet</h3>
 <p>You can add a custom menu command to insert a snippet of code.</p>
 <p>For example, suppose you have written a template for a Go test. You can then create a menu command to <code>cat</code> the contents of the file into the document:</p>
