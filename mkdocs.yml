@@ -9,6 +9,7 @@ edit_uri: ''
 
 theme:
   name: material
+  custom_dir: overrides
   font: false # do not load fonts from Google
   favicon: '/images/favicon.png'
   logo: '/images/logo.svg'
