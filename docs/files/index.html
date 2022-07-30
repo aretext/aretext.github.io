@@ -608,7 +608,7 @@
 
 
 <h1 id="files">Files</h1>
-<p>Aretext is designed to integrate seamlessly with a terminal-based workflow. This strongly influences aretext's approach to managing files:</p>
+<p>Aretext is designed to integrate seamlessly with a terminal-based workflow. This strongly influences how aretext manages files:</p>
 <ul>
 <li>
 <p>It delegates window management to your terminal multiplexer or emulator. Each instance of aretext opens a single document at a time; to edit multiple documents simultaneously, you can use <a href="https://wiki.archlinux.org/title/Tmux">tmux</a> to run multiple instances of aretext in the same terminal.</p>
@@ -620,7 +620,7 @@
 <p>It automatically reloads files that change on disk (unless there are unsaved changes). For example, if you run a code formatting tool that changes a file, aretext will automatically reload it.</p>
 </li>
 </ul>
-<p>Aretext currently supports only UTF-8 encoded documents.</p>
+<p>Aretext currently supports only UTF-8 encoded documents with Unix-style (LF) line endings.</p>
 <h2 id="fuzzy-file-search">Fuzzy file search</h2>
 <p>Aretext has built-in fuzzy search for files. This allows you to quickly find and open a file without leaving the editor:</p>
 <ol>

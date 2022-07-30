@@ -611,6 +611,11 @@
 <td>If true, display tabs in the document.</td>
 </tr>
 <tr>
+<td>showSpaces</td>
+<td>boolean</td>
+<td>If true, display spaces in the document.</td>
+</tr>
+<tr>
 <td>autoIndent</td>
 <td>boolean</td>
 <td>If true, indent new lines to match indentation of the previous line.</td>
@@ -619,6 +624,11 @@
 <td>showLineNumbers</td>
 <td>boolean</td>
 <td>If true, display line numbers.</td>
+</tr>
+<tr>
+<td>lineWrap</td>
+<td>enum</td>
+<td>Control soft line wrapping behavior. Either "character" for breaking at any character boundary or "word" to break only at word boundaries.</td>
 </tr>
 <tr>
 <td>menuCommands</td>
@@ -675,12 +685,16 @@
 <td><a href="http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html">C</a></td>
 </tr>
 <tr>
+<td>markdown</td>
+<td><a href="https://commonmark.org/">Markdown</a></td>
+</tr>
+<tr>
 <td>protobuf</td>
 <td><a href="https://developers.google.com/protocol-buffers/docs/proto3">Protocol Buffers Version 3</a></td>
 </tr>
 <tr>
-<td>devlog</td>
-<td><a href="https://devlog-cli.org/">devlog</a> DEPRECATED in v0.5.0</td>
+<td>todotxt</td>
+<td><a href="https://github.com/todotxt/todo.txt">todo.txt</a></td>
 </tr>
 <tr>
 <td>gitcommit</td>
@@ -725,7 +739,7 @@
 </tbody>
 </table>
 <h2 id="styles">Styles</h2>
-<p>The <code>styles</code> configuration is a dictionary. Each key represents a kind of UI element:</p>
+<p>The <code>styles</code> configuration is an object with keys:</p>
 <ul>
 <li><code>lineNum</code>: the line numbers displayed in the left margin of the document.</li>
 <li><code>tokenOperator</code>: an operator token recognized by the syntax language.</li>
@@ -735,8 +749,51 @@
 <li><code>tokenComment</code>: a comment token recognized by the syntax language.</li>
 <li><code>tokenCustom1</code> through <code>tokenCustom8</code>: language-specific tokens recognized by the syntax language.</li>
 </ul>
-<p>The values are objects with a single key <code>color</code> that controls the color of the UI element. The color can be either <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords">a W3C color keyword</a> or a hexadecimal RGB code. For example, both <code>red</code> and <code>#ff0000</code> represent the color red.</p>
+<p>Each style object supports the following (optional) attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>string</td>
+<td>Foreground (text) color.</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>string</td>
+<td>Background color.</td>
+</tr>
+<tr>
+<td>bold</td>
+<td>bool</td>
+<td>Set bold attribute.</td>
+</tr>
+<tr>
+<td>italic</td>
+<td>bool</td>
+<td>Set italic attribute.</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>bool</td>
+<td>Set underline attribute.</td>
+</tr>
+<tr>
+<td>strikethrough</td>
+<td>bool</td>
+<td>Set strikethrough attribute.</td>
+</tr>
+</tbody>
+</table>
+<p>Colors can be either <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords">a W3C color keyword</a> or a hexadecimal RGB code. For example, both <code>red</code> and <code>#ff0000</code> represent the color red.</p>
 <p>When using named colors, the terminal emulator may override the displayed color. For example, the <a href="https://github.com/eendroroy/alacritty-theme/blob/06c3920d35dbbe3de35183b0512f9406041d681b/themes/solarized_dark.yaml">solarized dark theme in Alacritty</a> overrides the color <code>red</code> to a specific hex code. If you want to ignore the terminal emulator palette, specify colors using hexadecimal RGB codes instead of named colors.</p>
+<p>Not all terminal emulators support every style attribute (bold, italic, etc.). If styles are displayed incorrectly, try changing the value of the <code>$TERM</code> environment variable. If you are using tmux, try <a href="https://github.com/tmux/tmux/wiki/FAQ#i-dont-see-italics-or-italics-and-reverse-are-the-wrong-way-round"><code>set -g default-terminal "tmux"</code></a>.</p>
 
               
             </article>
