@@ -4,6 +4,8 @@
   --border-color: #e6e6e6;
   --quote-fg-color: #606060;
   --quote-border-color: #e6e6e6;
+  --link-color: #007a6c;
+  --link-hover-color: #149a80;
   --cta-bg: #149a80;
   --cta-border: #128f76;
   --cta-text: #fff;
@@ -18,6 +20,8 @@
     --border-color: #606060;
     --quote-fg-color: #e6e6e6;
     --quote-border-color: #606060;
+    --link-color: #18bc9c;
+    --link-hover-color: #149a80;
   }
 }
 
@@ -53,15 +57,15 @@ p {
 }
 
 a {
-  color: var(--cta-hover-bg);
+  color: var(--link-color);
 }
 
 a:visited {
-  color: var(--cta-hover-bg);
+  color: var(--link-color);
 }
 
 a:hover {
-  color: var(--cta-bg);
+  color: var(--link-hover-color);
 }
 
 img {
