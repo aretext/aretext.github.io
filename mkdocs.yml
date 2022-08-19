@@ -57,3 +57,4 @@ nav:
   - 'Reference':
     - 'Commands': 'command-reference.md'
     - 'Configuration': 'config-reference.md'
+    - 'Cheat Sheet': 'cheat-sheet.html'
