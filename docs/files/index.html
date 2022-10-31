@@ -394,6 +394,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change-the-working-directory" class="md-nav__link">
+    Change the working directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-grep-to-search-files" class="md-nav__link">
     Using grep to search files
   </a>
@@ -602,6 +609,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change-the-working-directory" class="md-nav__link">
+    Change the working directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-grep-to-search-files" class="md-nav__link">
     Using grep to search files
   </a>
@@ -662,6 +676,14 @@
 <li>To force-reload, select the "force reload" menu command. This will discard unsaved changes and reload the document from disk.</li>
 <li>To force-quit, select the "force quit" menu command. This will discard unsaved changes and exit the program.</li>
 </ul>
+<h2 id="change-the-working-directory">Change the working directory</h2>
+<p>You can change the current working directory from within the editor using two menu commands:</p>
+<ul>
+<li>The "child directory" menu command changes to a sub-directory of the current working directory.</li>
+<li>The "parent directory" menu command changes to a parent directory of the current working directory.</li>
+</ul>
+<p>Each of these commands opens a searchable menu of directory paths. Once you select a path, the editor will change the current working directory.</p>
+<p>Note that if you start aretext from a shell like bash or zsh, these commands will <em>not</em> change the working directory of the shell.</p>
 <h2 id="using-grep-to-search-files">Using grep to search files</h2>
 <p>To search for a term in multiple files, you can create a custom menu command that calls <code>grep</code>. See <a href="../custom-menu-commands/">Custom Menu Commands</a> for instructions.</p>
 

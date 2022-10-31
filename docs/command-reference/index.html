@@ -612,47 +612,47 @@
 <tr>
 <td>cursor left</td>
 <td>left arrow</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor right</td>
 <td>right arrow</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor up</td>
 <td>up arrow</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor down</td>
 <td>down arrow</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor left</td>
 <td>h</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor right</td>
 <td>l</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor up</td>
 <td>k</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor down</td>
 <td>j</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor back</td>
 <td>backspace</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor to next matching character in line</td>
@@ -677,17 +677,17 @@
 <tr>
 <td>cursor next word start</td>
 <td>w</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor prev word start</td>
 <td>b</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor next word end</td>
 <td>e</td>
-<td></td>
+<td>count</td>
 </tr>
 <tr>
 <td>cursor prev paragraph</td>
@@ -730,12 +730,47 @@
 <td></td>
 </tr>
 <tr>
-<td>scroll up</td>
+<td>cursor matching code block delimiter (paren, brace, or bracket)</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>cursor prev unmatched open brace</td>
+<td>[{</td>
+<td></td>
+</tr>
+<tr>
+<td>cursor next unmatched close brace</td>
+<td>]}</td>
+<td></td>
+</tr>
+<tr>
+<td>cursor prev unmatched open paren</td>
+<td>[(</td>
+<td></td>
+</tr>
+<tr>
+<td>cursor next unmatched close paren</td>
+<td>])</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll up (full page)</td>
+<td>ctrl-f</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll down (full page)</td>
+<td>ctrl-b</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll up (half page)</td>
 <td>ctrl-u</td>
 <td></td>
 </tr>
 <tr>
-<td>scroll down</td>
+<td>scroll down (half page)</td>
 <td>ctrl-d</td>
 <td></td>
 </tr>
@@ -827,17 +862,17 @@
 <tr>
 <td>delete to start of next word</td>
 <td>dw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>delete a word</td>
 <td>daw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>delete inner word</td>
 <td>diw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>delete to next matching character in line</td>
@@ -862,17 +897,17 @@
 <tr>
 <td>change word</td>
 <td>cw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>change a word</td>
 <td>caw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>change inner word</td>
 <td>ciw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>change to next matching character in line</td>
@@ -917,17 +952,17 @@
 <tr>
 <td>yank to start of next word</td>
 <td>yw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>yank a word</td>
 <td>yaw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>yank inner word</td>
 <td>yiw</td>
-<td>clipboard page</td>
+<td>count, clipboard page</td>
 </tr>
 <tr>
 <td>yank line</td>
@@ -968,6 +1003,16 @@
 <td>find previous match</td>
 <td>N</td>
 <td></td>
+</tr>
+<tr>
+<td>search forward for word under cursor</td>
+<td>*</td>
+<td>count</td>
+</tr>
+<tr>
+<td>search backward for word under cursor</td>
+<td>#</td>
+<td>count</td>
 </tr>
 <tr>
 <td>undo</td>
@@ -1113,6 +1158,14 @@
 <td>n</td>
 </tr>
 <tr>
+<td>child directory</td>
+<td>cd</td>
+</tr>
+<tr>
+<td>parent directory</td>
+<td>pd</td>
+</tr>
+<tr>
 <td>toggle show tabs</td>
 <td>ta</td>
 </tr>
@@ -1135,42 +1188,6 @@
 <tr>
 <td>replay macro</td>
 <td>r</td>
-</tr>
-<tr>
-<td>set syntax plaintext</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax json</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax yaml</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax go</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax python</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax rust</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax c</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax gitcommit</td>
-<td></td>
-</tr>
-<tr>
-<td>set syntax gitrebase</td>
-<td></td>
 </tr>
 </tbody>
 </table>

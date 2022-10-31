@@ -703,7 +703,7 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terminal</span><span class="w">  </span><span class="c1"># or &quot;silent&quot; or &quot;insert&quot; or &quot;fileLocations&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>After restarting the editor, the new command will be available in the command menu. Selecting the new command will launch a shell (configured by the <code>$SHELL</code> environment variable) and execute the shell command (in this case, echoing "hello world").</p>
-<p>The "mode" parameter controls how aretext handles the command's input and output. There are four modes:</p>
+<p>The "mode" parameter controls how aretext handles the command's input and output. The table below shows the available modes:</p>
 <table>
 <thead>
 <tr>
@@ -733,10 +733,22 @@
 <td>paste from system clipboard, insert snippet, comment/uncomment selection, ...</td>
 </tr>
 <tr>
+<td>insertChoice</td>
+<td>none</td>
+<td>insert choice menu</td>
+<td>choose a word to insert from a dictionary like <code>/usr/share/dict/words</code>, ...</td>
+</tr>
+<tr>
 <td>fileLocations</td>
 <td>none</td>
 <td>file location menu</td>
 <td>grep for word under cursor, ...</td>
+</tr>
+<tr>
+<td>workingDir</td>
+<td>none</td>
+<td>working directory menu</td>
+<td>select the current working directory from a preset list</td>
 </tr>
 </tbody>
 </table>
@@ -745,6 +757,7 @@
 <li><code>$FILEPATH</code> is the absolute path to the current file.</li>
 <li><code>$WORD</code> is the current word under the cursor.</li>
 <li><code>$LINE</code> is the line number of the cursor, starting from one.</li>
+<li><code>$COLUMN</code> is the column position of the cursor in bytes, starting from one.</li>
 <li><code>$SELECTION</code> is the currently selected text (if any).</li>
 </ul>
 <p>If there are multiple commands with the same name, only the last of these commands will appear in the menu.</p>

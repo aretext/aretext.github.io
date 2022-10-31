@@ -636,7 +636,7 @@
 
 <h1 id="configuration">Configuration</h1>
 <h2 id="editing-config">Editing Config</h2>
-<p>Aretext stores its configuration in a single YAML file. You can edit the config file using the <code>-editconfig</code> flag:</p>
+<p>Aretext stores its configuration in a single YAML file. You can edit the config file using the <code>editconfig</code> flag:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aretext -editconfig
 </code></pre></div>
 <p>The configuration file is located at <code>$XDG_CONFIG_HOME/aretext/config.yaml</code>, where <code>XDG_CONFIG_HOME</code> is configured according to the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a>. On Linux, this defaults to <code>~/.config</code>, and on macOS it defaults to <code>~/Library/Application Support</code>.</p>
@@ -678,7 +678,7 @@
 <li>For lists, the values from all rules are combined.</li>
 <li>For dictionaries, the keys from later rules are added to the merged dictionary, potentially overwriting keys set by previous rules.</li>
 </ul>
-<p>This is a powerful mechanism for customizing configuration based on filename extension and/or project location. For example, suppose that one project you work on uses four spaces to indent JSON files. You could add a new rule to your config that overwrites the tabSize for JSON files in that specific project:</p>
+<p>This is a powerful mechanism for customizing configuration based on filename extension and/or project location. For example, suppose that the style guidelines for a project mandate four spaces of indentation for JSON. You could add a new rule to your config that overwrites the tabSize for JSON files in that specific project:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># ... other rules above ...</span><span class="w"></span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myproject json</span><span class="w"></span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;**/myproject/**/*.json&quot;</span><span class="w"></span>

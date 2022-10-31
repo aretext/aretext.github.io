@@ -74,8 +74,8 @@
       box-shadow: 2px 2px 2px #aaa;
       padding: 5px 10px;
       display: inline-block;
-      margin-bottom: 10px;
-      margin-right: 5px;
+      margin: 0 8px 10px 5px;
+      font-weight: bold;
     }
 
     .description {
@@ -109,7 +109,7 @@
         <div class="command"><span class="keys">k</span> (or <span class="keys">&uarr;</span>)<span class="description">up</span></div>
         <div class="command"><span class="keys">j</span> (or <span class="keys">&darr;</span>)<span class="description">down</span></div>
         <div class="command"><span class="keys">w</span><span class="description">next word</span></div>
-        <div class="command"><span class="keys">b</span><span class="description">prev word</span></div>
+        <div class="command"><span class="keys">b</span><span class="description">previous word</span></div>
         <div class="command"><span class="keys">e</span><span class="description">end of word</span></div>
         <div class="command"><span class="keys">^</span><span class="description">start of line</span></div>
         <div class="command"><span class="keys">$</span><span class="description">end of line</span></div>
@@ -120,6 +120,9 @@
         <div class="command"><span class="keys">123gg</span><span class="description">go to line 123</span></div>
         <div class="command"><span class="keys">Ctrl</span>+<span class="keys">u</span><span class="description">scroll up</span></div>
         <div class="command"><span class="keys">Ctrl</span>+<span class="keys">d</span><span class="description">scroll down</span></div>
+        <div class="command"><span class="keys">*</span><span class="description">matching brace, bracket, or paren</span></div>
+        <div class="command"><span class="keys">[{</span><span class="description">previous unmatched open brace</span></div>
+        <div class="command"><span class="keys">]}</span><span class="description">next unmatched close brace</span></div>
       </article>
 
       <article>
@@ -147,6 +150,7 @@
         <h2>search</h2>
         <div class="command"><span class="keys">/</span><span class="description">search forward</span></div>
         <div class="command"><span class="keys">?</span><span class="description">search backward</span></div>
+        <div class="command"><span class="keys">*</span><span class="description">search for word under cursor</span></div>
         <div class="command"><span class="keys">n</span><span class="description">next match</span></div>
         <div class="command"><span class="keys">N</span><span class="description">previous match</span></div>
       </article>
