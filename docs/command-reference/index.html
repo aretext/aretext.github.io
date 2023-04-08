@@ -650,9 +650,19 @@
 <td>count</td>
 </tr>
 <tr>
+<td>cursor forward</td>
+<td>space</td>
+<td>count</td>
+</tr>
+<tr>
 <td>cursor back</td>
 <td>backspace</td>
 <td>count</td>
+</tr>
+<tr>
+<td>cursor start of next line after indentation</td>
+<td>enter</td>
+<td></td>
 </tr>
 <tr>
 <td>cursor to next matching character in line</td>
@@ -680,13 +690,28 @@
 <td>count</td>
 </tr>
 <tr>
+<td>cursor next word start, including punctuation</td>
+<td>W</td>
+<td>count</td>
+</tr>
+<tr>
 <td>cursor prev word start</td>
 <td>b</td>
 <td>count</td>
 </tr>
 <tr>
+<td>cursor prev word start, including punctuation</td>
+<td>B</td>
+<td>count</td>
+</tr>
+<tr>
 <td>cursor next word end</td>
 <td>e</td>
+<td>count</td>
+</tr>
+<tr>
+<td>cursor next word end, including punctuation</td>
+<td>E</td>
 <td>count</td>
 </tr>
 <tr>
@@ -865,6 +890,11 @@
 <td>count, clipboard page</td>
 </tr>
 <tr>
+<td>delete to start of next word, including punctuation</td>
+<td>dW</td>
+<td>count, clipboard page</td>
+</tr>
+<tr>
 <td>delete a word</td>
 <td>daw</td>
 <td>count, clipboard page</td>
@@ -873,6 +903,36 @@
 <td>delete inner word</td>
 <td>diw</td>
 <td>count, clipboard page</td>
+</tr>
+<tr>
+<td>delete a double-quoted string</td>
+<td>da"</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete inner double-quoted string</td>
+<td>di"</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete a single-quoted string</td>
+<td>da'</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete inner single-quoted string</td>
+<td>di'</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete a backtick-quoted string</td>
+<td>da`</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete inner backtick-quoted string</td>
+<td>di`</td>
+<td>clipboard page</td>
 </tr>
 <tr>
 <td>delete to next matching character in line</td>
@@ -895,6 +955,36 @@
 <td>count, clipboard page</td>
 </tr>
 <tr>
+<td>delete inner paren block</td>
+<td>dib <br/> di( <br/> di)</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete a paren block</td>
+<td>dab <br/> da( <br/> da)</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete inner brace block</td>
+<td>diB <br/> di{ <br/> di}</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete a brace block</td>
+<td>daB <br/> da{ <br/> da}</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete inner angle block</td>
+<td>di&lt; <br/> di&gt;</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>delete an angle block</td>
+<td>da&lt; <br/> da&gt;</td>
+<td>clipboard page</td>
+</tr>
+<tr>
 <td>change word</td>
 <td>cw</td>
 <td>count, clipboard page</td>
@@ -908,6 +998,36 @@
 <td>change inner word</td>
 <td>ciw</td>
 <td>count, clipboard page</td>
+</tr>
+<tr>
+<td>change a double-quoted string</td>
+<td>ca"</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change inner double-quoted string</td>
+<td>ci"</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change a single-quoted string</td>
+<td>ca'</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change inner single-quoted string</td>
+<td>ci'</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change a backtick-quoted string</td>
+<td>ca`</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change inner backtick-quoted string</td>
+<td>ci`</td>
+<td>clipboard page</td>
 </tr>
 <tr>
 <td>change to next matching character in line</td>
@@ -928,6 +1048,36 @@
 <td>change till prev matching character in line</td>
 <td>cT{char}</td>
 <td>count, clipboard page</td>
+</tr>
+<tr>
+<td>change inner paren block</td>
+<td>cib <br/> ci( <br/> ci)</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change a paren block</td>
+<td>cab <br/> ca( <br/> ca)</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change inner brace block</td>
+<td>ciB <br/> ci{ <br/> ci}</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change a brace block</td>
+<td>caB <br/> ca{ <br/> ca}</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change inner angle block</td>
+<td>ci&lt; <br/> ci&gt;</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>change an angle block</td>
+<td>ca&lt; <br/> ca&gt;</td>
+<td>clipboard page</td>
 </tr>
 <tr>
 <td>replace character</td>
@@ -955,6 +1105,11 @@
 <td>count, clipboard page</td>
 </tr>
 <tr>
+<td>yank to start of next word, including punctuation</td>
+<td>yW</td>
+<td>count, clipboard page</td>
+</tr>
+<tr>
 <td>yank a word</td>
 <td>yaw</td>
 <td>count, clipboard page</td>
@@ -963,6 +1118,36 @@
 <td>yank inner word</td>
 <td>yiw</td>
 <td>count, clipboard page</td>
+</tr>
+<tr>
+<td>yank a double-quoted string</td>
+<td>ya"</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>yank inner double-quoted string</td>
+<td>yi"</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>yank a single-quoted string</td>
+<td>ya'</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>yank inner single-quoted string</td>
+<td>yi'</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>yank a backtick-quoted string</td>
+<td>ya`</td>
+<td>clipboard page</td>
+</tr>
+<tr>
+<td>yank inner backtick-quoted string</td>
+<td>yi`</td>
+<td>clipboard page</td>
 </tr>
 <tr>
 <td>yank line</td>
@@ -986,7 +1171,7 @@
 </tr>
 <tr>
 <td>start forward search</td>
-<td>/</td>
+<td><br/></td>
 <td></td>
 </tr>
 <tr>
@@ -1106,6 +1291,76 @@
 <td>y</td>
 <td>clipboard page</td>
 </tr>
+<tr>
+<td>select inner word</td>
+<td>iw</td>
+<td>count</td>
+</tr>
+<tr>
+<td>select a word</td>
+<td>aw</td>
+<td>count</td>
+</tr>
+<tr>
+<td>select a double-quoted string</td>
+<td>a"</td>
+<td></td>
+</tr>
+<tr>
+<td>select inner double-quoted string</td>
+<td>i"</td>
+<td></td>
+</tr>
+<tr>
+<td>select a single-quoted string</td>
+<td>a'</td>
+<td></td>
+</tr>
+<tr>
+<td>select inner single-quoted string</td>
+<td>i'</td>
+<td></td>
+</tr>
+<tr>
+<td>select a backtick-quoted string</td>
+<td>a`</td>
+<td></td>
+</tr>
+<tr>
+<td>select inner backtick-quoted string</td>
+<td>i`</td>
+<td></td>
+</tr>
+<tr>
+<td>select inner paren block</td>
+<td>ib <br/> i( <br/> i)</td>
+<td></td>
+</tr>
+<tr>
+<td>select a paren block</td>
+<td>ab <br/> a( <br/> a)</td>
+<td></td>
+</tr>
+<tr>
+<td>select inner brace block</td>
+<td>iB <br/> i{ <br/> i}</td>
+<td></td>
+</tr>
+<tr>
+<td>select a brace block</td>
+<td>aB <br/> a{ <br/> a}</td>
+<td></td>
+</tr>
+<tr>
+<td>select inner angle block</td>
+<td>i&lt; <br/> i&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>select an angle block</td>
+<td>a&lt; <br/> a&gt;</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="menu-commands">Menu Commands</h2>
@@ -1131,7 +1386,7 @@
 </tr>
 <tr>
 <td>save document and quit</td>
-<td>sq, wq</td>
+<td>sq, wq, x</td>
 </tr>
 <tr>
 <td>force save document</td>

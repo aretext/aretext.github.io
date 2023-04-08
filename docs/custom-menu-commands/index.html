@@ -702,7 +702,8 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">shellCmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &#39;hello world!&#39; | less</span><span class="w"></span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terminal</span><span class="w">  </span><span class="c1"># or &quot;silent&quot; or &quot;insert&quot; or &quot;fileLocations&quot;</span><span class="w"></span>
 </code></pre></div>
-<p>After restarting the editor, the new command will be available in the command menu. Selecting the new command will launch a shell (configured by the <code>$SHELL</code> environment variable) and execute the shell command (in this case, echoing "hello world").</p>
+<p>After restarting the editor, the new command will be available in the command menu. Selecting the new command will launch a shell to execute the given command (in this case, echoing "hello world").</p>
+<p>The shell program can be configured by environment variables: <code>$ARETEXT_SHELL</code> has highest priority, then <code>$SHELL</code>. If neither environment variable is set, aretext uses <code>sh</code>.</p>
 <p>The "mode" parameter controls how aretext handles the command's input and output. The table below shows the available modes:</p>
 <table>
 <thead>
@@ -860,10 +861,10 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">menuCommands</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">split window horizontal</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="nt">shellCmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tmux split-window -h &quot;aretext $FILEPATH&quot;</span><span class="w"></span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="nt">shellCmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tmux split-window -h &quot;aretext -line $LINE $FILEPATH&quot;</span><span class="w"></span>
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">silent</span><span class="w"></span>
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">split window vertical</span><span class="w"></span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">      </span><span class="nt">shellCmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tmux split-window -v &quot;aretext $FILEPATH</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">      </span><span class="nt">shellCmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tmux split-window -v &quot;aretext -line $LINE $FILEPATH</span><span class="w"></span>
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">silent</span><span class="w"></span>
 </code></pre></div>
 
