@@ -797,9 +797,14 @@
 <td>Additional menu items that can run arbitrary shell commands. See <a href="#menu-command-object">Menu Command Object</a> below for the expected fields.</td>
 </tr>
 <tr>
+<td>hidePatterns</td>
+<td>array of strings</td>
+<td>Glob patterns matching files or directories to hide from file search. Patterns are matched against absolute paths.</td>
+</tr>
+<tr>
 <td>hideDirectories</td>
 <td>array of strings</td>
-<td>Glob patterns matching directories to hide from file search. Patterns are matched against the absolute path to the directory.</td>
+<td>(DEPRECATED, use hidePatterns instead) Glob patterns matching directories to hide from file search. Patterns are matched against the absolute path to the directory.</td>
 </tr>
 <tr>
 <td>styles</td>
