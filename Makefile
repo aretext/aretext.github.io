@@ -5,7 +5,7 @@ clean:
 
 build: clean
 	mkdir -p ./site/docs
-	mkdocs build
+	uv run -- mkdocs build
 
 server:
-	python -m http.server 8080 --directory ./site
+	uv run -- python -m http.server 8080 --directory ./site
