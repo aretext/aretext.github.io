@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://aretext.org/docs/config-reference/">
+        <link rel="canonical" href="https://aretext.org/docs/unicode/">
       
       
-        <link rel="prev" href="../command-reference/">
+        <link rel="prev" href="../custom-menu-commands/">
       
       
-        <link rel="next" href="../cheat-sheet.html">
+        <link rel="next" href="../command-reference/">
       
       
       <link rel="icon" href="/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Configuration - aretext documentation</title>
+        <title>Unicode - aretext documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-reference" class="md-skip">
+        <a href="#unicode" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration
+              Unicode
             
           </span>
         </div>
@@ -362,18 +362,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -389,7 +391,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -515,10 +517,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../unicode/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Unicode
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -529,6 +553,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -545,20 +607,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -574,7 +634,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Reference
@@ -608,32 +668,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Configuration
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../config-reference/" class="md-nav__link">
         
   
   
@@ -644,53 +682,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#syntax-languages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax Languages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#menu-command-object" class="md-nav__link">
-    <span class="md-ellipsis">
-      Menu Command Object
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#styles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Styles
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -753,27 +744,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntax-languages" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax Languages
+      Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#menu-command-object" class="md-nav__link">
+  <a href="#terminal-support" class="md-nav__link">
     <span class="md-ellipsis">
-      Menu Command Object
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#styles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Styles
+      Terminal Support
     </span>
   </a>
   
@@ -795,265 +777,17 @@
 
 
 
-<h1 id="configuration-reference">Configuration Reference</h1>
-<p>This document lists every configuration option in aretext.</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>syntaxLanguage</td>
-<td>enum</td>
-<td>Language used for syntax highlighting. Must be a valid <a href="#syntax-languages">syntax language</a>.</td>
-</tr>
-<tr>
-<td>tabSize</td>
-<td>integer</td>
-<td>Maximum number of cells occupied by a tab. Must be greater than zero.</td>
-</tr>
-<tr>
-<td>tabExpand</td>
-<td>boolean</td>
-<td>If true, replace inserted tabs with the equivalent number of spaces.</td>
-</tr>
-<tr>
-<td>showTabs</td>
-<td>boolean</td>
-<td>If true, display tabs in the document.</td>
-</tr>
-<tr>
-<td>showSpaces</td>
-<td>boolean</td>
-<td>If true, display spaces in the document.</td>
-</tr>
-<tr>
-<td>showUnicode</td>
-<td>boolean</td>
-<td>If true, display Unicode codepoints for all non-ASCII characters.</td>
-</tr>
-<tr>
-<td>autoIndent</td>
-<td>boolean</td>
-<td>If true, indent new lines to match indentation of the previous line.</td>
-</tr>
-<tr>
-<td>showLineNumbers</td>
-<td>boolean</td>
-<td>If true, display line numbers.</td>
-</tr>
-<tr>
-<td>lineNumberMode</td>
-<td>enum</td>
-<td>Control how line numbers are displayed. Either "absolute" or "relative" to the cursor.</td>
-</tr>
-<tr>
-<td>lineWrap</td>
-<td>enum</td>
-<td>Control soft line wrapping behavior. Either "character" for breaking at any character boundary or "word" to break only at word boundaries.</td>
-</tr>
-<tr>
-<td>menuCommands</td>
-<td>array of objects</td>
-<td>Additional menu items that can run arbitrary shell commands. See <a href="#menu-command-object">Menu Command Object</a> below for the expected fields.</td>
-</tr>
-<tr>
-<td>hidePatterns</td>
-<td>array of strings</td>
-<td>Glob patterns matching files or directories to hide from file search. Patterns are matched against absolute paths.</td>
-</tr>
-<tr>
-<td>hideDirectories</td>
-<td>array of strings</td>
-<td>(DEPRECATED, use hidePatterns instead) Glob patterns matching directories to hide from file search. Patterns are matched against the absolute path to the directory.</td>
-</tr>
-<tr>
-<td>styles</td>
-<td>dict</td>
-<td>Styles control how UI elements are displayed. See <a href="#styles">Styles</a> below for details.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="syntax-languages">Syntax Languages</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bash</td>
-<td><a href="https://www.gnu.org/software/bash/manual/bash.html">bash</a></td>
-</tr>
-<tr>
-<td>c</td>
-<td><a href="http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html">C</a></td>
-</tr>
-<tr>
-<td>criticmarkup</td>
-<td><a href="https://github.com/CriticMarkup/CriticMarkup-toolkit">CriticMarkup</a></td>
-</tr>
-<tr>
-<td>gitcommit</td>
-<td>Format for editing a git commit</td>
-</tr>
-<tr>
-<td>gitrebase</td>
-<td>Format for git interactive rebase</td>
-</tr>
-<tr>
-<td>go</td>
-<td><a href="https://golang.org/ref/spec">Go</a></td>
-</tr>
-<tr>
-<td>gotemplate</td>
-<td><a href="https://pkg.go.dev/text/template">Go template</a></td>
-</tr>
-<tr>
-<td>json</td>
-<td><a href="https://www.json.org/json-en.html">JSON</a></td>
-</tr>
-<tr>
-<td>makefile</td>
-<td><a href="https://www.gnu.org/software/make/manual/make.html">Makefile</a></td>
-</tr>
-<tr>
-<td>markdown</td>
-<td><a href="https://commonmark.org/">Markdown</a></td>
-</tr>
-<tr>
-<td>p4</td>
-<td><a href="https://p4.org">p4</a></td>
-</tr>
-<tr>
-<td>plaintext</td>
-<td>Do not apply any syntax highlighting.</td>
-</tr>
-<tr>
-<td>protobuf</td>
-<td><a href="https://developers.google.com/protocol-buffers/docs/proto3">Protocol Buffers Version 3</a></td>
-</tr>
-<tr>
-<td>python</td>
-<td><a href="https://docs.python.org/3/reference/">Python</a></td>
-</tr>
-<tr>
-<td>rust</td>
-<td><a href="https://doc.rust-lang.org/stable/reference/">Rust</a></td>
-</tr>
-<tr>
-<td>sql</td>
-<td><a href="https://www.postgresql.org/docs/current/sql-keywords-appendix.html">SQL based on PL/PgSQL</a></td>
-</tr>
-<tr>
-<td>todotxt</td>
-<td><a href="https://github.com/todotxt/todo.txt">todo.txt</a></td>
-</tr>
-<tr>
-<td>xml</td>
-<td><a href="https://www.w3.org/TR/2006/REC-xml11-20060816/">xml</a></td>
-</tr>
-<tr>
-<td>yaml</td>
-<td><a href="https://yaml.org/spec/">YAML</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="menu-command-object">Menu Command Object</h2>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>Displayed name of the menu item.</td>
-</tr>
-<tr>
-<td>shellCmd</td>
-<td>string</td>
-<td>Shell command to execute when the menu item is selected.</td>
-</tr>
-<tr>
-<td>mode</td>
-<td>enum</td>
-<td>Either "silent", "terminal", "insert", or "fileLocations". See <a href="../custom-menu-commands/">Custom Menu Commands</a> for more details.</td>
-</tr>
-<tr>
-<td>save</td>
-<td>bool</td>
-<td>If true, attempt to save the document before executing the command.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="styles">Styles</h2>
-<p>The <code>styles</code> configuration is an object with keys:</p>
+<h1 id="unicode">Unicode</h1>
+<h2 id="configuration">Configuration</h2>
+<p>Aretext supports two ways of rendering non-ASCII Unicode:</p>
 <ul>
-<li><code>lineNum</code>: the line numbers displayed in the left margin of the document.</li>
-<li><code>tokenOperator</code>: an operator token recognized by the syntax language.</li>
-<li><code>tokenKeyword</code>: a keyword token recognized by the syntax language.</li>
-<li><code>tokenNumber</code>: a number token recognized by the syntax language.</li>
-<li><code>tokenString</code>: a string token recognized by the syntax language.</li>
-<li><code>tokenComment</code>: a comment token recognized by the syntax language.</li>
-<li><code>tokenCustom1</code> through <code>tokenCustom16</code>: language-specific tokens recognized by the syntax language.</li>
-<li><code>escapedUnicode</code>: escaped Unicode codepoints when <code>showUnicode</code> is enabled.</li>
+<li>When <code>showUnicode</code> is false (default), the Unicode characters encoded in the document are sent directly to the terminal for display.</li>
+<li>When <code>showUnicode</code> is true, the Unicode characters are escaped. For example, the smiling face emoji (😀) will display as <code>&lt;U+1F600&gt;</code>.</li>
 </ul>
-<p>Each style object supports the following (optional) attributes:</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>color</td>
-<td>string</td>
-<td>Foreground (text) color.</td>
-</tr>
-<tr>
-<td>backgroundColor</td>
-<td>string</td>
-<td>Background color.</td>
-</tr>
-<tr>
-<td>bold</td>
-<td>bool</td>
-<td>Set bold attribute.</td>
-</tr>
-<tr>
-<td>italic</td>
-<td>bool</td>
-<td>Set italic attribute.</td>
-</tr>
-<tr>
-<td>underline</td>
-<td>bool</td>
-<td>Set underline attribute.</td>
-</tr>
-<tr>
-<td>strikethrough</td>
-<td>bool</td>
-<td>Set strikethrough attribute.</td>
-</tr>
-</tbody>
-</table>
-<p>Colors can be either <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords">a W3C color keyword</a> or a hexadecimal RGB code. For example, both <code>red</code> and <code>#ff0000</code> represent the color red.</p>
-<p>When using named colors, the terminal emulator may override the displayed color. For example, the <a href="https://github.com/eendroroy/alacritty-theme/blob/06c3920d35dbbe3de35183b0512f9406041d681b/themes/solarized_dark.yaml">solarized dark theme in Alacritty</a> overrides the color <code>red</code> to a specific hex code. If you want to ignore the terminal emulator palette, specify colors using hexadecimal RGB codes instead of named colors.</p>
-<p>Not all terminal emulators support every style attribute (bold, italic, etc.). If styles are displayed incorrectly, try changing the value of the <code>$TERM</code> environment variable. If you are using tmux, try <a href="https://github.com/tmux/tmux/wiki/FAQ#i-dont-see-italics-or-italics-and-reverse-are-the-wrong-way-round"><code>set -g default-terminal "tmux"</code></a>.</p>
+<p>The <code>showUnicode</code> setting can be set in aretext's <a href="../configuration/">configuration file</a> or toggled with a menu command ("Toggle Show Unicode").</p>
+<h2 id="terminal-support">Terminal Support</h2>
+<p>Terminal emulator support for non-ASCII Unicode varies widely. In some cases, the width aretext calculates for a Unicode character can differ from the width of the glyph rendered by the terminal emulator. This can cause rendering artifacts, misaligned cursor position, and other strange behavior.</p>
+<p>If you see problems with a document containing symbols or emojis, try using a different terminal emulator or enabling <code>showUnicode</code>.</p>
 
 
 
