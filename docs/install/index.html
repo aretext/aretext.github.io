@@ -401,15 +401,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#macos-x86-64-bit" class="md-nav__link">
-    <span class="md-ellipsis">
-      macOS x86 64-bit
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#macos-arm-64-bit" class="md-nav__link">
     <span class="md-ellipsis">
       macOS ARM 64-bit
@@ -856,15 +847,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#macos-x86-64-bit" class="md-nav__link">
-    <span class="md-ellipsis">
-      macOS x86 64-bit
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#macos-arm-64-bit" class="md-nav__link">
     <span class="md-ellipsis">
       macOS ARM 64-bit
@@ -950,35 +932,28 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>tar -zxvf $RELEASE.tar.gz
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo cp $RELEASE/aretext /usr/local/bin/
 </code></pre></div>
-<h3 id="macos-x86-64-bit">macOS x86 64-bit</h3>
+<h3 id="macos-arm-64-bit">macOS ARM 64-bit</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VERSION=1.6.0
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>RELEASE=aretext_v${VERSION}_darwin_amd64
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>RELEASE=aretext_v${VERSION}_darwin_arm64
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>curl -LO https://github.com/aretext/aretext/releases/download/v$VERSION/$RELEASE.tar.gz
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>tar -zxvf $RELEASE.tar.gz
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>sudo cp $RELEASE/aretext /usr/local/bin/
 </code></pre></div>
-<h3 id="macos-arm-64-bit">macOS ARM 64-bit</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>VERSION=1.6.0
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>RELEASE=aretext_v${VERSION}_darwin_arm64
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>curl -LO https://github.com/aretext/aretext/releases/download/v$VERSION/$RELEASE.tar.gz
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>tar -zxvf $RELEASE.tar.gz
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo cp $RELEASE/aretext /usr/local/bin/
-</code></pre></div>
 <h2 id="build-from-source">Build From Source</h2>
 <p>If you have <a href="https://golang.org/doc/install">installed go</a>, then you can build aretext from source:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir -p $(go env GOPATH)/bin
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git clone https://github.com/aretext/aretext.git
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>cd aretext
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>make install
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir -p $(go env GOPATH)/bin
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git clone https://github.com/aretext/aretext.git
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>cd aretext
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>make install
 </code></pre></div>
 <p>This will install aretext in <code>$(go env GOPATH)/bin</code>, which you can add to your <code>$PATH</code> environment variable. If you use bash, put this line in your <code>~/.bashrc</code> or <code>~/.bash_profile</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export PATH=$PATH:$(go env GOPATH)/bin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>export PATH=$PATH:$(go env GOPATH)/bin
 </code></pre></div>
 <h2 id="packages">Packages</h2>
 <p>If a package is not yet available for your platform, please consider creating one! We are looking for package maintainers on Debian, Fedora, Homebrew, Nix, and any other platform you may prefer!</p>
 <h3 id="arch-linux">Arch Linux</h3>
 <p>aretext is available as an <a href="https://aur.archlinux.org/packages/aretext">AUR Package</a>. If you use <a href="https://github.com/Jguer/yay">yay</a>, run this to install it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>aretext
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>aretext
 </code></pre></div>
 
 
