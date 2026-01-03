@@ -54,6 +54,7 @@ nav:
     - 'edit.md'
     - 'configuration.md'
     - 'custom-menu-commands.md'
+    - 'unicode.md'
   - 'Reference':
     - 'Commands': 'command-reference.md'
     - 'Configuration': 'config-reference.md'
