@@ -53,6 +53,7 @@ nav:
     - 'navigation.md'
     - 'edit.md'
     - 'configuration.md'
+    - 'system-clipboard.md'
     - 'custom-menu-commands.md'
     - 'unicode.md'
   - 'Reference':
