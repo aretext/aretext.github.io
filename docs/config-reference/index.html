@@ -495,6 +495,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../system-clipboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Clipboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../custom-menu-commands/" class="md-nav__link">
         
   
@@ -679,6 +702,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#system-clipboard-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Clipboard Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#styles" class="md-nav__link">
     <span class="md-ellipsis">
       Styles
@@ -765,6 +797,15 @@
   <a href="#menu-command-object" class="md-nav__link">
     <span class="md-ellipsis">
       Menu Command Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-clipboard-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Clipboard Object
     </span>
   </a>
   
@@ -862,14 +903,14 @@
 <td>Additional menu items that can run arbitrary shell commands. See <a href="#menu-command-object">Menu Command Object</a> below for the expected fields.</td>
 </tr>
 <tr>
+<td>systemClipboard</td>
+<td>object</td>
+<td>Commands for integrating with the system clipboard. See <a href="../system-clipboard/">System Clipboard</a> and <a href="#system-clipboard-object">System Clipboard Object</a> below.</td>
+</tr>
+<tr>
 <td>hidePatterns</td>
 <td>array of strings</td>
 <td>Glob patterns matching files or directories to hide from file search. Patterns are matched against absolute paths.</td>
-</tr>
-<tr>
-<td>hideDirectories</td>
-<td>array of strings</td>
-<td>(DEPRECATED, use hidePatterns instead) Glob patterns matching directories to hide from file search. Patterns are matched against the absolute path to the directory.</td>
 </tr>
 <tr>
 <td>styles</td>
@@ -898,6 +939,10 @@
 <tr>
 <td>criticmarkup</td>
 <td><a href="https://github.com/CriticMarkup/CriticMarkup-toolkit">CriticMarkup</a></td>
+</tr>
+<tr>
+<td>dockerfile</td>
+<td><a href="https://docs.docker.com/reference/dockerfile">Dockerfile</a></td>
 </tr>
 <tr>
 <td>gitcommit</td>
@@ -956,6 +1001,10 @@
 <td><a href="https://github.com/todotxt/todo.txt">todo.txt</a></td>
 </tr>
 <tr>
+<td>typescript</td>
+<td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
+</tr>
+<tr>
 <td>xml</td>
 <td><a href="https://www.w3.org/TR/2006/REC-xml11-20060816/">xml</a></td>
 </tr>
@@ -994,6 +1043,33 @@
 <td>save</td>
 <td>bool</td>
 <td>If true, attempt to save the document before executing the command.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-clipboard-object">System Clipboard Object</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>useByDefault</td>
+<td>boolean</td>
+<td>If true, use the system clipboard by default for clipboard operations when no clipboard page is explicitly specified.</td>
+</tr>
+<tr>
+<td>copyCmd</td>
+<td>string</td>
+<td>Shell command used to copy text to the system clipboard. Required.</td>
+</tr>
+<tr>
+<td>pasteCmd</td>
+<td>string</td>
+<td>Shell command used to paste text from the system clipboard. Required.</td>
 </tr>
 </tbody>
 </table>
